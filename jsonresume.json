@@ -1,0 +1,299 @@
+{
+  "basics": {
+    "name": "Juan Antonio Díaz Férnandez",
+    "label": "Desarrollador Backend",
+    "image": "https://avatars.githubusercontent.com/u/104170612?v=4",
+    "email": "juandiazfdez1992@gmail.com",
+    "phone": "+52 6291099059",
+    "url": "https://midu.dev",
+    "summary": "Desarrollador backend apasionado y estudiante comprometido en constante búsqueda de conocimiento. Con habilidades en el diseño e implementación de sistemas backend, con experiencia en lenguajes como Python y JavaScript, así como en el manejo de bases de datos relacionales y no relacionales.",
+    "location": {
+      "address": "",
+      "postalCode": "33980",
+      "city": "Chihuahua",
+      "countryCode": "MX",
+      "region": " México"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Juan Díaz Fernández",
+        "url": "https://www.linkedin.com/in/juan-d%C3%ADaz-fern%C3%A1ndez-b388592ba/"
+      },
+      {
+        "network": "GitHub",
+        "username": "Fuan200",
+        "url": "https://github.com/Fuan200"
+      }
+    ]
+  },
+
+  "work": [
+    {
+      "name": "Leading Tech",
+      "position": "Programador Web",
+      "url": "",
+      "startDate": "2024-02-01",
+      "endDate": null,
+      "summary": "Programador web especializado en Angular y NestJS, con habilidades en desarrollo frontend y backend, además de tener el rol de tester utilizando Jest para pruebas unitarias y de integración.",
+      "highlights": [
+        ""
+      ]
+    },
+    {
+      "name": "AgriCam",
+      "position": "Facturación",
+      "url": "",
+      "startDate": "2022-05-01",
+      "endDate": "2023-05-01",
+      "summary": "Experiencia en facturación y gestión administrativa. Competente en el manejo preciso de documentos y registros financieros.",
+      "highlights": [
+        ""
+      ]
+    }
+  ],
+
+  "volunteer": [{
+    "organization": "Organization",
+    "position": "Volunteer",
+    "url": "https://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
+    ]
+  }],
+
+  "education": [{
+    "institution": "Universidad Autónoma de Chihuahua",
+    "url": "https://www.uach.mx",
+    "area": "Ingenieria en Ciencias de la Computación",
+    "studyType": "Estudiante de 8vo Semestre de Ingenieria en Ciencias de la Computación",
+    "startDate": "2020-08-01",
+    "endDate": null,
+    "score": "9.29",
+    "courses": [
+      ""
+    ]
+  }],
+
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+
+  "certificates": [{
+    "name": "Certificate",
+    "date": "2021-11-07",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+
+  "skills": [
+    {
+      "name": "Python",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Scripting", "Programming"
+      ]
+    },
+    {
+      "name": "Bash",
+      "level": "Medio",
+      "keywords": [
+        "Scripting", "Programming", "Linux"
+      ]
+    },
+    {
+      "name": "HTML",
+      "level": "Medio",
+      "keywords": [
+        "Desarrollo Web", "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Básico",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Medio",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Básico",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Angular",
+      "level": "Básico",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+      ]
+    },
+    {
+      "name": "Express",
+      "level": "Medio",
+      "keywords": [
+        "Backend", "JS"
+      ]
+    },
+    {
+      "name": "NestJS",
+      "level": "Básico",
+      "keywords": [
+        "Backend"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Medio",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "level": "Medio",
+      "keywords": [
+        "Bases de Datos", "NoSQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Docker",
+      "level": "Medio",
+      "keywords": [
+        "Contenedores"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Medio",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "Alto",
+      "keywords": [
+        "Sistemas Operativos", "Unix"
+      ]
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+
+  "projects": [
+    {
+      "name": "Blog API",
+      "isActive": true,
+      "description": "Implementación de una RestAPI hecho con FastAPI para un blog",
+      "highlights": [
+        "Python",
+        "FastAPI",
+        "API"
+      ],
+      "url": "https://github.com/JuanDiazuwu/blog_api"
+    },
+    {
+      "name": "VR UACH LAB",
+      "isActive": false,
+      "description": "Web site del laboratorio de realidad virtual de la Universidad Autónoma de Chihuahua",
+      "highlights": [
+        "Angular",
+        "TypeScript",
+        "VR/AR"
+      ],
+      "url": "https://vr-uach-lab.web.app/"
+    },
+    {
+      "name": "Bong Simulation",
+      "isActive": false,
+      "description": "Juego de Pong en Python utilizando la biblioteca Pygame",
+      "highlights": [
+        "Python",
+        "Pygame",
+        "threading | multiprocessing"
+      ],
+      "url": "https://github.com/Fuan200/bong_simulation"
+    },
+    {
+      "name": "Simple web site Python",
+      "isActive": false,
+      "description": "Minimalista implementación de un web site utilizando el framework flask",
+      "highlights": [
+        "Python",
+        "Flask",
+        "Desarrollo Web"
+      ],
+      "url": "https://github.com/Fuan200/website_python_flask"
+    },
+    {
+      "name": "Weather app Python",
+      "isActive": false,
+      "description": "Aplicaciones de clima hecho con python y la libreria de tkinter",
+      "highlights": [
+        "Python",
+        "Tkinter",
+        "Weather"
+      ],
+      "url": "https://github.com/Fuan200/weather_app"
+    }
+  ]
+}
