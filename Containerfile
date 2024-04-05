@@ -1,11 +1,6 @@
-FROM node:lts-alpine as runtime
-
+FROM node:lts-alpine AS build
 WORKDIR /app
-
-COPY . .
-
+COPY package*.json ./
 RUN npm install
-
-EXPOSE 4321
-
-CMD npm run dev
+COPY . .
+CMD npm run dev -- --host 0.0.0.0
