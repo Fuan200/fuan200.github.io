@@ -241,13 +241,26 @@
 
   "projects": [
     {
+      "name": "API Rest to Neo4J",
+      "isActive": true,
+      "description": "Implementación de una RestAPI hecho con FastAPI utilizando como base de datos Neo4j",
+      "highlights": [
+        "Python",
+        "FastAPI",
+        "API",
+        "Neo4j"
+      ],
+      "url": "https://github.com/JuanDiazuwu/db_neo4j_project"
+    },
+    {
       "name": "Blog API",
       "isActive": true,
       "description": "Implementación de una RestAPI hecho con FastAPI para un blog",
       "highlights": [
         "Python",
         "FastAPI",
-        "API"
+        "API",
+        "mongodb"
       ],
       "url": "https://github.com/JuanDiazuwu/blog_api"
     },
