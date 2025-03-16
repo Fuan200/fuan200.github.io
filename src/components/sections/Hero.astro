@@ -8,7 +8,7 @@ import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 
-const { name, label, image, location, profiles, phone, email} = basics
+const { name, label, image, location, profiles, phone, email } = basics
 const { city, region } = location
 
 const SOCIAL_ICONS: Record<string, any> = {
@@ -73,6 +73,17 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
                         )
                     })
                 }
+                {
+                    basics.cv && (
+                        <a href={basics.cv}
+                        download
+                        class="download-btn"
+                        title={`Descargar el CV de ${name}`}>
+                            Descargar CV
+                        </a>
+                    )
+                }
+                
             </footer>
         </div>
         <figure>
@@ -155,5 +166,24 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
     footer a:hover svg {
         fill: #fdfdfd;
         transform: scale(1.5);
+    }
+
+    .download-btn {
+        width: auto; /* Para que se ajuste al texto */
+        min-width: 120px; /* Hace el botón más grande */
+        font-size: 0.85rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .download-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.07) !important;
     }
 </style>
