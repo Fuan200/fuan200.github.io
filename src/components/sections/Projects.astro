@@ -56,6 +56,12 @@ import { projects } from '@cv'
         flex-direction: column;
         padding: 16px;
         height: 100%;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    article:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
   
     article header {
