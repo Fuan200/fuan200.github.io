@@ -35,7 +35,7 @@ const SKILLS_ICONS: Record<string, any> = {
 }
 ---
 
-<Section title="Skills">
+<Section title="Habilidades">
     <ul>
         {
             skills.map(({ name }) => {
@@ -43,7 +43,7 @@ const SKILLS_ICONS: Record<string, any> = {
                 const Icon = SKILLS_ICONS[iconName]        
                 return (
                     <li>
-                    {Icon && <Icon />} <span>{name}</span>
+                        {Icon && <Icon />} <span>{name}</span>
                     </li>
                 )
             })
@@ -60,9 +60,9 @@ const SKILLS_ICONS: Record<string, any> = {
 
     li {
         align-items: center;
-        background: #eee;
+        background: #444;
         border-radius: 6px;
-        color: black;
+        color: #fdfdfd;
         display: flex;
         font-size: 0.8rem;
         font-weight: 500;

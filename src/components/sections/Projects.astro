@@ -50,18 +50,20 @@ import { projects } from '@cv'
   
     article {
         border-radius: 8px;
-        border: 1px solid #f2f2f2;
+        border: 1px solid #202020;
         gap: 16px;
         display: flex;
         flex-direction: column;
         padding: 16px;
         height: 100%;
+        background: #292929;
+        color: #fdfdfd;
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
 
     article:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
   
     article header {
@@ -73,7 +75,7 @@ import { projects } from '@cv'
     }
   
     article a {
-        color: #111;
+        color: #fdfdfd;
     }
   
     article a:hover {
@@ -92,6 +94,7 @@ import { projects } from '@cv'
         animation-duration: 3s;
         animation-timing-function: ease-in;
         animation-iteration-count: infinite;
+        margin-left: 10px;
     }
   
     footer {
@@ -103,8 +106,8 @@ import { projects } from '@cv'
   
     footer span {
         border-radius: 6px;
-        background: #eee;
-        color: #444;
+        background: #555;
+        color: #fdfdfd;
         font-size: 0.6rem;
         font-weight: 500;
         padding: 0.2rem 0.6rem;
@@ -133,7 +136,7 @@ import { projects } from '@cv'
     
         article {
             border: none;
-            box-shadow: 0 1px 1px #f2f2f2;
+            box-shadow: 0 1px 1px #444;
             padding: 0 0 16px 0;
         }
     }
