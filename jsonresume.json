@@ -1,6 +1,6 @@
 {
   "basics": {
-    "name": "Juan Antonio Díaz Férnandez",
+    "name": "Juan Antonio Díaz Fernández",
     "label": "Desarrollador Backend",
     "image": "https://avatars.githubusercontent.com/u/104170612?v=4",
     "email": "juandiazfdez1992@gmail.com",
@@ -30,11 +30,22 @@
 
   "work": [
     {
-      "name": "Leading Tech",
+      "name": "Sphere Tec",
       "position": "Programador Web",
       "url": "",
-      "startDate": "2024-02-01",
+      "startDate": "2024-08-01",
       "endDate": null,
+      "summary": "Desarrollador web especializado en Angular y NestJS, con experiencia en el diseño e implementación de aplicaciones frontend y backend. Manejo de Azure y Firebase para despliegue y administración de servicios en la nube, además de gestión y configuración de servidores Linux.",
+      "highlights": [
+        ""
+      ]
+    },
+    {
+      "name": "Leading Tech",
+      "position": "Programador Web & Tester",
+      "url": "",
+      "startDate": "2024-02-01",
+      "endDate": "2024-06-01",
       "summary": "Programador web especializado en Angular y NestJS, con habilidades en desarrollo frontend y backend, además de tener el rol de tester utilizando Jest para pruebas unitarias y de integración.",
       "highlights": [
         ""
@@ -69,10 +80,10 @@
     "institution": "Universidad Autónoma de Chihuahua",
     "url": "https://www.uach.mx",
     "area": "Ingenieria en Ciencias de la Computación",
-    "studyType": "Estudiante de 8vo Semestre de Ingenieria en Ciencias de la Computación",
+    "studyType": "Estudiante egresado de Ingenieria en Ciencias de la Computación",
     "startDate": "2020-08-01",
-    "endDate": null,
-    "score": "9.29",
+    "endDate": "2024-11-30",
+    "score": "9.36",
     "courses": [
       ""
     ]

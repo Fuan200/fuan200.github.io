@@ -8,10 +8,16 @@ import { work } from "@cv"
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+        ({ name, startDate, endDate, position, summary, url }) => {
+          const formatDate = (dateString: string | null): string => {
+          if (!dateString) return "Actual"
+            const date = new Date(dateString)
+            
+            const month = String(date.getMonth() + 2).padStart(2, "0")
+            const year = date.getFullYear()
+
+            return `${month}/${year}`
+          }
 
           return (
             <li>
@@ -30,13 +36,13 @@ import { work } from "@cv"
                     <time 
                       datetime={startDate}
                       data-title={startDate}>
-                        {startYear}
+                        {formatDate(startDate)}
                     </time>
                     {" - "}
                     <time 
                       datetime={endDate}
                       data-title={endDate}>
-                        {endYear}
+                        {formatDate(endDate)}
                     </time>
                   </div>
                 </header>
