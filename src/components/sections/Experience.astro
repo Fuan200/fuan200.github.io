@@ -1,16 +1,30 @@
 ---
+interface Props {
+  work: {
+    name: string;
+    position: string;
+    startDate: string;
+    endDate: string | null;
+    summary: string;
+    url: string;
+  }[],
+}
+
 import Section from "../Section.astro"
 
-import { work } from "@cv"
+const { currentLocale } = Astro;
+const { work } = Astro.props;
+const title = currentLocale === 'en' ? 'Experience' : 'Experiencia laboral';
+const present = currentLocale === 'en' ? 'Present' : 'Actual';
 ---
 
-<Section title="Experiencia laboral">
+<Section title={title}>
   <ul>
     {
       work.map(
         ({ name, startDate, endDate, position, summary, url }) => {
           const formatDate = (dateString: string | null): string => {
-          if (!dateString) return "Actual"
+          if (!dateString) return present;
             const date = new Date(dateString)
             
             const month = String(date.getMonth() + 2).padStart(2, "0")

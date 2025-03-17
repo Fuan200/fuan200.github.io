@@ -1,10 +1,25 @@
 ---
+interface Props {
+  education: {
+    institution: string;
+    area: string;
+    studyType: string;
+    startDate: string;
+    endDate: string;
+    score: number;
+  }[],
+}
+
 import Section from '@/components/Section.astro'
 
-import { education } from '@cv'
+const { education } = Astro.props;
+const { currentLocale } = Astro;
+
+const title = currentLocale === 'en' ? 'Education' : 'Educación'
+const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:'
 ---
 
-<Section title="Educación">
+<Section title={title}>
     <ul>
         {education.map(({ institution, startDate, endDate, area, studyType, score}) => {
             const startYear = new Date(startDate).getFullYear()
@@ -22,7 +37,7 @@ import { education } from '@cv'
                         </header>
                         <footer>
                             <p>{studyType}</p>
-                            <p>Promedio de {score}</p>
+                            <p>{score_text} {score}</p>
                         </footer>
                     </article>
                 </li>

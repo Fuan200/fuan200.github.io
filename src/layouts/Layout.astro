@@ -1,16 +1,17 @@
 ---
-import { basics } from '@cv'
-
 interface Props {
 	title: string;
+	basics: { image: string, summary: string, url: string };
 }
 
-const { title } = Astro.props;
-const { image, summary, url } = basics
+const { currentLocale } = Astro;
+
+const { title, basics } = Astro.props;
+const { image, summary, url } = basics;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>

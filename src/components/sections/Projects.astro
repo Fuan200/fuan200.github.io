@@ -1,10 +1,22 @@
 ---
+interface Props {
+    projects: {
+        name: string;
+        isActive: boolean;
+        description: string;
+        highlights: string[];
+        url: string;
+    }[],
+}
+
 import Section from '@/components/Section.astro'
 
-import { projects } from '@cv'
+const { currentLocale } = Astro;
+const { projects } = Astro.props;
+const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
 ---
 
-<Section title="Proyectos">
+<Section title={title}>
     <ul>
         {
             projects.map(({ url, description, highlights, name, isActive }) => {

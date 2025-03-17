@@ -8,11 +8,11 @@ import Hero from '@/components/sections/Hero.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Skills from '@/components/sections/Skills.astro';
 
-import { basics, work, education, projects } from '@cv'
-const { name, label } = basics
+import { basics, work, education, projects } from '@cv_english';
+const { name, label } = basics;
 ---
 
-<Layout title={`Portafolio de ${name} - ${label}`} basics={basics}>
+<Layout title={`Portfolio to ${name} - ${label}`} basics={basics}>
 	<main>
 		<Hero basics={basics}/>
 		<About basics={basics}/>

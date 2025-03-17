@@ -33,9 +33,12 @@ const SKILLS_ICONS: Record<string, any> = {
     GitHub,
     Linux
 }
+
+const { currentLocale } = Astro;
+const title = currentLocale === 'en' ? 'Skills' : 'Habilidades';
 ---
 
-<Section title="Habilidades">
+<Section title={title}>
     <ul>
         {
             skills.map(({ name }) => {

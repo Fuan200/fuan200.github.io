@@ -1,0 +1,324 @@
+{
+    "basics": {
+      "name": "Juan Antonio Díaz Fernández",
+      "label": "Backend Developer",
+      "image": "https://avatars.githubusercontent.com/u/104170612?v=4",
+      "email": "juandiazfdez1992@gmail.com",
+      "phone": "+52 6291099059",
+      "url": "https://fuan200.github.io/",
+      "cv": "./public/CV_March_2025_English.pdf",
+      "summary": "Passionate backend developer and committed student constantly seeking knowledge. With skills in the design and implementation of backend systems, experience in languages such as Python and JavaScript, as well as in handling relational and non-relational databases",
+      "location": {
+        "address": "",
+        "postalCode": "33980",
+        "city": "Chihuahua",
+        "countryCode": "MX",
+        "region": " México"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "Juan Díaz Fernández",
+          "url": "https://www.linkedin.com/in/juan-d%C3%ADaz-fern%C3%A1ndez-b388592ba/"
+        },
+        {
+          "network": "GitHub",
+          "username": "Fuan200",
+          "url": "https://github.com/Fuan200"
+        }
+      ]
+    },
+  
+    "work": [
+      {
+        "name": "Sphere Tec",
+        "position": "Web Programmer",
+        "url": "",
+        "startDate": "2024-08-01",
+        "endDate": null,
+        "summary": "Web developer specialized in Angular and NestJS, with experience in designing and implementing frontend and backend applications. Skilled in using Azure and Firebase for deployment and cloud service management, as well as in managing and configuring Linux servers.",
+        "highlights": [
+          ""
+        ]
+      },
+      {
+        "name": "Leading Tech",
+        "position": "Web Programmer & Tester",
+        "url": "",
+        "startDate": "2024-02-01",
+        "endDate": "2024-06-01",
+        "summary": "Web developer specialized in Angular and NestJS, with skills in frontend and backend development, as well as having the role of tester using Jest for unit and integration tests.",
+        "highlights": [
+          ""
+        ]
+      },
+      {
+        "name": "AgriCam",
+        "position": "Billing Clerk",
+        "url": "",
+        "startDate": "2022-05-01",
+        "endDate": "2023-05-01",
+        "summary": "Experience in billing and administrative management. Proficient in the accurate handling of documents and financial records.",
+        "highlights": [
+          ""
+        ]
+      }
+    ],
+  
+    "volunteer": [{
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }],
+  
+    "education": [{
+      "institution": "Universidad Autónoma de Chihuahua",
+      "url": "https://www.uach.mx",
+      "area": "Engineering in Computer Science",
+      "studyType": "Graduate student in Computer Science Engineering",
+      "startDate": "2020-08-01",
+      "endDate": "2024-11-30",
+      "score": 9.36,
+      "courses": [
+        ""
+      ]
+    }],
+  
+    "awards": [{
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }],
+  
+    "certificates": [{
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }],
+  
+    "publications": [{
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }],
+  
+    "skills": [
+      {
+        "name": "Python",
+        "level": "Avanzado",
+        "keywords": [
+          "Desarrollo Web", "Scripting", "Programming"
+        ]
+      },
+      {
+        "name": "Bash",
+        "level": "Medio",
+        "keywords": [
+          "Scripting", "Programming", "Linux"
+        ]
+      },
+      {
+        "name": "HTML",
+        "level": "Medio",
+        "keywords": [
+          "Desarrollo Web", "Frontend"
+        ]
+      },
+      {
+        "name": "CSS",
+        "level": "Básico",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "Diseño Responsive"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "level": "Medio",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "level": "Básico",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+        ]
+      },
+      {
+        "name": "Angular",
+        "level": "Básico",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+        ]
+      },
+      {
+        "name": "Node",
+        "level": "Avanzado",
+        "keywords": [
+          "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+        ]
+      },
+      {
+        "name": "Express",
+        "level": "Medio",
+        "keywords": [
+          "Backend", "JS"
+        ]
+      },
+      {
+        "name": "NestJS",
+        "level": "Básico",
+        "keywords": [
+          "Backend"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "level": "Medio",
+        "keywords": [
+          "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "level": "Medio",
+        "keywords": [
+          "Bases de Datos", "NoSQL", "Almacenamiento de Datos", "Backend"
+        ]
+      },
+      {
+        "name": "Docker",
+        "level": "Medio",
+        "keywords": [
+          "Contenedores"
+        ]
+      },
+      {
+        "name": "Git",
+        "level": "Avanzado",
+        "keywords": [
+          "Control de Versiones", "Colaboración", "Código Fuente"
+        ]
+      },
+      {
+        "name": "GitHub",
+        "level": "Medio",
+        "keywords": [
+          "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+        ]
+      },
+      {
+        "name": "Linux",
+        "level": "Alto",
+        "keywords": [
+          "Sistemas Operativos", "Unix"
+        ]
+      }
+    ],
+  
+    "languages": [
+      {
+        "language": "Spanish",
+        "fluency": "Native speaker"
+      },
+      {
+        "language": "English",
+        "fluency": "Advanced"
+      }
+    ],
+  
+    "interests": [{
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }],
+  
+    "references": [{
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }],
+  
+    "projects": [
+      {
+        "name": "API Rest to Neo4J",
+        "isActive": true,
+        "description": "Implementation of a RestAPI built with FastAPI using Neo4j as the database",
+        "highlights": [
+          "Python",
+          "FastAPI",
+          "API",
+          "Neo4j"
+        ],
+        "url": "https://github.com/JuanDiazuwu/db_neo4j_project"
+      },
+      {
+        "name": "Blog API",
+        "isActive": true,
+        "description": "Implementation of a RestAPI built with FastAPI for a blog",
+        "highlights": [
+          "Python",
+          "FastAPI",
+          "API",
+          "mongodb"
+        ],
+        "url": "https://github.com/JuanDiazuwu/blog_api"
+      },
+      {
+        "name": "VR UACH LAB",
+        "isActive": false,
+        "description": "Website of the virtual reality laboratory at the Universidad Autónoma de Chihuahua",
+        "highlights": [
+          "Angular",
+          "TypeScript",
+          "VR/AR"
+        ],
+        "url": "https://vr-uach-lab.web.app/"
+      },
+      {
+        "name": "Bong Simulation",
+        "isActive": false,
+        "description": "Pong game in Python using the Pygame library",
+        "highlights": [
+          "Python",
+          "Pygame",
+          "threading | multiprocessing"
+        ],
+        "url": "https://github.com/Fuan200/bong_simulation"
+      },
+      {
+        "name": "Simple web site Python",
+        "isActive": false,
+        "description": "Minimalist implementation of a website using the Flask framework",
+        "highlights": [
+          "Python",
+          "Flask",
+          "Web Development"
+        ],
+        "url": "https://github.com/Fuan200/website_python_flask"
+      },
+      {
+        "name": "Weather app Python",
+        "isActive": false,
+        "description": "Weather app built with Python and the tkinter library",
+        "highlights": [
+          "Python",
+          "Tkinter",
+          "Weather"
+        ],
+        "url": "https://github.com/Fuan200/weather_app"
+      }
+    ]
+  }

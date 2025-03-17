@@ -1,10 +1,19 @@
 ---
+interface Props {
+    basics: {
+        summary: string;
+    }
+}
+
 import Section from '@/components/Section.astro'
-import { basics } from "@cv"
-const { summary } = basics
+const { currentLocale } = Astro;
+const { basics } = Astro.props;
+const { summary } = basics;
+
+const title = currentLocale === 'en' ? 'About Me' : 'Sobre mí'
 ---
 
-<Section title="Sobre mí">
+<Section title={title}>
     <p>
         {summary}
     </p>
