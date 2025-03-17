@@ -41,7 +41,6 @@ const SOCIAL_ICONS: Record<string, any> = {
 }
 
 const toggleLanguage = currentLocale === "en" ? "/" : "/en";
-const buttonText = currentLocale === "en" ? "Español" : "English";
 
 const linkedInInfo = profiles.find(({ network }) => network === "LinkedIn")
 const linkedUrl = linkedInInfo?.url
@@ -85,7 +84,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
                     )
                 }
                 {
-                    profiles.map(({ network, url, username }) => {
+                    profiles.map(({ network, url }) => {
                         const Icon = SOCIAL_ICONS[network]
 
                         return(
