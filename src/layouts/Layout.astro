@@ -4,6 +4,8 @@ interface Props {
 	basics: { image: string, summary: string, url: string };
 }
 
+import Navbar from '@/components/Navbar.astro';
+
 const { currentLocale } = Astro;
 
 const { title, basics } = Astro.props;
@@ -27,6 +29,7 @@ const { image, summary, url } = basics;
 		<meta property="og:image" content="" />
 	</head>
 	<body>
+		<Navbar />
 		<slot />
 	</body>
 </html>
