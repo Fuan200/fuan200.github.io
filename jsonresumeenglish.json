@@ -333,31 +333,31 @@
         "name":"MotherBoard",
         "model":"MSI PRO B650M-P",
         "details":["Micro-ATX", "AM5"],
-        "url":"https://es.msi.com/Motherboard/PRO-B650M-P"
+        "url":"https://www.msi.com/Motherboard/PRO-B650M-P"
       },
       {
         "name":"SSD",
         "model":"Kingston NV2 NVMe",
         "details":["1TB"],
-        "url":""
+        "url":"https://www.kingston.com/en/ssd/DC2000B-data-center-solid-state-drive"
       },
       {
         "name":"RAM",
         "model":"Corsair Vengeance DDR5 6000MHz",
         "details":["32GB", "(2x16GB)", "CL36"],
-        "url":""
+        "url":"https://www.corsair.com/lm/en/p/memory/cmk32gx5m2d6000z36/vengeance-32gb-2x16gb-ddr5-dram-6000mt-s-c36-amd-expo-memory-kit-cmk32gx5m2d6000z36"
       },
       {
         "name":"Power Supply",
         "model":"Corsair RM750e",
         "details":["80 Plus Gold"],
-        "url":"https://www.corsair.com/lm/es/p/psu/cp-9020248-ww/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020248-ww"
+        "url":"https://www.corsair.com/lm/en/p/psu/cp-9020248-ww/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020248-ww"
       },
       {
         "name":"Case",
         "model":"Corsair 4000D Airflow",
         "details":["Black", "2 Fans"],
-        "url":"https://www.corsair.com/lm/es/p/pc-cases/cc-9011200-ww/4000d-airflow-tempered-glass-mid-tower-atx-case-black-cc-9011200-ww"
+        "url":"https://www.corsair.com/lm/en/p/pc-cases/cc-9011200-ww/4000d-airflow-tempered-glass-mid-tower-atx-case-black-cc-9011200-ww"
       }
     ],
     "peripherals": [
@@ -365,31 +365,31 @@
         "name":"Monitor",
         "model":"LG UltraGear 27",
         "details":["QHD", "Nano IPS"],
-        "url":""
+        "url":"https://www.lg.com/us/monitors/lg-27gl850-b-gaming-monitor"
       },
       {
         "name":"Microphone",
         "model":"Fifine AM8",
         "details":["USB", "XLR"],
-        "url":""
+        "url":"https://fifinemicrophone.com/products/fifine-ampligame-am8-streaming-microphone"
       },
       {
         "name":"Keyboard",
         "model":"MACHENIKE K500",
         "details":["Red Switch"],
-        "url":""
+        "url":"https://global.machenike.com/collections/keyboard/products/k500pro"
       },
       {
         "name":"Mouse",
         "model":"Logitech M170",
-        "details":["2.4 GHZ Inalámbrico"],
-        "url":""
+        "details":["2.4 GHz Inalámbrico"],
+        "url":"https://www.logitech.com/en-us/shop/p/m170-wireless-mouse.910-004940"
       },
       {
         "name":"Earphones",
         "model":"Apple EarPods",
         "details":["3.5mm"],
-        "url":""
+        "url":"https://www.apple.com/shop/product/MWU53AM/A/earpods-35mm-headphone-plug"
       }
     ]
   }

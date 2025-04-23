@@ -327,7 +327,7 @@
         "name":"Procesador",
         "model":"AMD Ryzen 5 8600G",
         "details":["APU", "4.3GHz"],
-        "url":"https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html"
+        "url":"https://www.amd.com/es/products/processors/desktops/ryzen/8000-series/amd-ryzen-5-8600g.html"
       },
       {
         "name":"Placa Madre",
@@ -336,16 +336,16 @@
         "url":"https://es.msi.com/Motherboard/PRO-B650M-P"
       },
       {
-        "name":"SSD",
+        "name":"Solid State Drive",
         "model":"Kingston NV2 NVMe",
         "details":["1TB"],
-        "url":""
+        "url":"https://www.kingston.com/latam/ssd/DC2000B-data-center-solid-state-drive"
       },
       {
         "name":"RAM",
         "model":"Corsair Vengeance DDR5 6000MHz",
         "details":["32GB", "(2x16GB)", "CL36"],
-        "url":""
+        "url":"https://www.corsair.com/lm/es/p/memory/cmk32gx5m2d6000z36/vengeance-32gb-2x16gb-ddr5-dram-6000mt-s-c36-amd-expo-memory-kit-cmk32gx5m2d6000z36"
       },
       {
         "name":"Fuente de Poder",
@@ -365,31 +365,31 @@
         "name":"Monitor",
         "model":"LG UltraGear 27",
         "details":["QHD", "Nano IPS"],
-        "url":""
+        "url":"https://www.lg.com/mx/monitores/monitores-gaming/27gn60r-b/"
       },
       {
         "name":"Micrófono",
         "model":"Fifine AM8",
         "details":["USB", "XLR"],
-        "url":""
+        "url":"https://fifinemicrophone.com/products/fifine-ampligame-am8-streaming-microphone"
       },
       {
         "name":"Teclado",
         "model":"MACHENIKE K500",
         "details":["Red Switch"],
-        "url":""
+        "url":"https://global.machenike.com/es/products/k500"
       },
       {
         "name":"Ratón",
         "model":"Logitech M170",
-        "details":["2.4 GHZ Inalámbrico"],
-        "url":""
+        "details":["2.4 GHz Inalámbrico"],
+        "url":"https://www.logitech.com/es-mx/shop/p/m170-wireless-mouse.910-004940"
       },
       {
         "name":"Auriculares",
         "model":"Apple EarPods",
         "details":["3.5mm", "Headphones"],
-        "url":""
+        "url":"https://www.apple.com/mx/shop/product/MWU53AM/A/earpods-con-conector-de-35-mm"
       }
     ]
   }

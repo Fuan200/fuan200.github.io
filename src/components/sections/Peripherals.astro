@@ -26,10 +26,10 @@ const titlePeripherals = currentLocale === 'en' ? 'Peripherals' : 'Perifericos';
                 <header>
                 <h3>
                     <a href={url} target="_blank" title={`Ver más sobre ${name}`}>
-                    {name}
+                    {model}
                     </a>
                 </h3>
-                <p>{model}</p>
+                <p>{name}</p>
                 </header>
                 <footer>
                     {
@@ -100,7 +100,7 @@ const titlePeripherals = currentLocale === 'en' ? 'Peripherals' : 'Perifericos';
     }
   
     article p {
-        font-size: 0.76rem;
+        font-size: 0.85rem;
         line-height: 1.2rem;
         margin-bottom: 4px;
     }
