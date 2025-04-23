@@ -5,7 +5,9 @@ import Translate from "@/icons/translate.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const toggleLanguage = lang === "en" ? "/es" : "/en";
+const currentPath = Astro.url.pathname;
+const newLang = lang === "en" ? "es" : "en";
+const toggleLanguage = currentPath.replace(/^\/(en|es)/, `/${newLang}`);
 
 const links = [
   { name: t('nav.home'), href: `/${lang}/` },
