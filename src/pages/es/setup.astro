@@ -1,0 +1,23 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SetupComponents from '@/components/sections/SetupComponents.astro';
+
+import { basics, setup } from '@cv'
+import Peripherals from '@/components/sections/Peripherals.astro';
+const { name, label } = basics
+---
+
+<Layout title={`Setup de ${name} - ${label}`} basics={basics}>
+	<main>
+		<SetupComponents components={setup.components}/>
+		<Peripherals peripherals={setup.peripherals}/>
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding: 4rem;
+		margin: auto;
+		width: 100%;
+	}
+</style>

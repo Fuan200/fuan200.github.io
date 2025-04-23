@@ -320,5 +320,77 @@
       ],
       "url": "https://github.com/Fuan200/weather_app"
     }
-  ]
+  ],
+  "setup": {
+    "components": [
+      {
+        "name":"Procesador",
+        "model":"AMD Ryzen 5 8600G",
+        "details":["APU", "4.3GHz"],
+        "url":"https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html"
+      },
+      {
+        "name":"Placa Madre",
+        "model":"MSI PRO B650M-P",
+        "details":["Micro-ATX", "AM5"],
+        "url":"https://es.msi.com/Motherboard/PRO-B650M-P"
+      },
+      {
+        "name":"SSD",
+        "model":"Kingston NV2 NVMe",
+        "details":["1TB"],
+        "url":""
+      },
+      {
+        "name":"RAM",
+        "model":"Corsair Vengeance DDR5 6000MHz",
+        "details":["32GB", "(2x16GB)", "CL36"],
+        "url":""
+      },
+      {
+        "name":"Fuente de Poder",
+        "model":"Corsair RM750e",
+        "details":["80 Plus Gold"],
+        "url":"https://www.corsair.com/lm/es/p/psu/cp-9020248-ww/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020248-ww"
+      },
+      {
+        "name":"Gabinete",
+        "model":"Corsair 4000D Airflow",
+        "details":["Black", "2 Fans"],
+        "url":"https://www.corsair.com/lm/es/p/pc-cases/cc-9011200-ww/4000d-airflow-tempered-glass-mid-tower-atx-case-black-cc-9011200-ww"
+      }
+    ],
+    "peripherals": [
+      {
+        "name":"Monitor",
+        "model":"LG UltraGear 27",
+        "details":["QHD", "Nano IPS"],
+        "url":""
+      },
+      {
+        "name":"Micrófono",
+        "model":"Fifine AM8",
+        "details":["USB", "XLR"],
+        "url":""
+      },
+      {
+        "name":"Teclado",
+        "model":"MACHENIKE K500",
+        "details":["Red Switch"],
+        "url":""
+      },
+      {
+        "name":"Ratón",
+        "model":"Logitech M170",
+        "details":["2.4 GHZ Inalámbrico"],
+        "url":""
+      },
+      {
+        "name":"Auriculares",
+        "model":"Apple EarPods",
+        "details":["3.5mm", "Headphones"],
+        "url":""
+      }
+    ]
+  }
 }
