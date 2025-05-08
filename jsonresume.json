@@ -33,7 +33,7 @@
     {
       "name": "Sphere Tec",
       "position": "Programador Web",
-      "url": "https://spheretec.org/",
+      "url": "",
       "startDate": "2024-08-01",
       "endDate": null,
       "summary": "Desarrollador web especializado en Angular y NestJS, con experiencia en el diseño e implementación de aplicaciones frontend y backend. Manejo de Azure y Firebase para despliegue y administración de servicios en la nube, además de gestión y configuración de servidores Linux.",
@@ -337,9 +337,9 @@
       },
       {
         "name":"Solid State Drive",
-        "model":"Kingston NV2 NVMe",
+        "model":"Kingston SNV3S NVMe",
         "details":["1TB"],
-        "url":"https://www.kingston.com/latam/ssd/DC2000B-data-center-solid-state-drive"
+        "url":"https://www.kingston.com/latam/ssd/nv3-nvme-pcie-ssd?capacity=1tb"
       },
       {
         "name":"RAM",
@@ -381,9 +381,9 @@
       },
       {
         "name":"Ratón",
-        "model":"Logitech M170",
-        "details":["2.4 GHz Inalámbrico"],
-        "url":"https://www.logitech.com/es-mx/shop/p/m170-wireless-mouse.910-004940"
+        "model":"Pulsar Gears X2H",
+        "details":["2.4GHz", "54g", "1ms"],
+        "url":"https://www.pulsar.gg/collections/x2h-series/products/x2h-v3-gaming-mouse?variant=45629555736830"
       },
       {
         "name":"Auriculares",

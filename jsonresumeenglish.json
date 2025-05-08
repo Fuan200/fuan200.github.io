@@ -337,9 +337,9 @@
       },
       {
         "name":"SSD",
-        "model":"Kingston NV2 NVMe",
+        "model":"Kingston SNV3S NVMe",
         "details":["1TB"],
-        "url":"https://www.kingston.com/en/ssd/DC2000B-data-center-solid-state-drive"
+        "url":"https://www.kingston.com/en/ssd/nv3-nvme-pcie-ssd?capacity=1tb"
       },
       {
         "name":"RAM",
@@ -381,9 +381,9 @@
       },
       {
         "name":"Mouse",
-        "model":"Logitech M170",
-        "details":["2.4 GHz Inalámbrico"],
-        "url":"https://www.logitech.com/en-us/shop/p/m170-wireless-mouse.910-004940"
+        "model":"Pulsar Gears X2H",
+        "details":["2.4GHz", "1.9oz", "1ms"],
+        "url":"https://www.pulsar.gg/collections/x2h-series/products/x2h-v3-gaming-mouse?variant=45629555736830"
       },
       {
         "name":"Earphones",
