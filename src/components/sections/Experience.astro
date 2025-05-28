@@ -23,7 +23,6 @@ const present = currentLocale === 'en' ? 'Present' : 'Actual';
     {
       work.map(
         ({ name, startDate, endDate, position, summary, url }) => {
-          console.log(url)
           const formatDate = (dateString: string | null): string => {
           if (!dateString) return present;
             const date = new Date(dateString)

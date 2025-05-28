@@ -9,5 +9,7 @@ export default defineConfig({
         routing: {
             prefixDefaultLocale: true,
         }
-    }
+    },
+    middleware: true,
+    output: 'server',
 });
