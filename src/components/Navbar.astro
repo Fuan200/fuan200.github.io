@@ -6,13 +6,19 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const currentPath = Astro.url.pathname;
-const newLang = lang === "en" ? "es" : "en";
-const toggleLanguage = currentPath.replace(/^\/(en|es)/, `/${newLang}`);
+
+// Lógica para cambiar idioma
+let toggleLanguage;
+if (lang === "es") {
+  toggleLanguage = currentPath === "/" ? "/en/" : `/en${currentPath}`;
+} else {
+  toggleLanguage = currentPath.replace(/^\/en/, "") || "/";
+}
 
 const links = [
-  { name: t('nav.home'), href: `/${lang}/` },
-  { name: t('nav.blog'), href: `/${lang}/blog` },
-  { name: t('nav.setup'), href: `/${lang}/setup` },
+  { name: t('nav.home'), href: lang === 'es' ? '/' : '/en/' },
+  { name: t('nav.blog'), href: lang === 'es' ? '/blog' : '/en/blog' },
+  { name: t('nav.setup'), href: lang === 'es' ? '/setup' : '/en/setup' },
 ];
 ---
 
