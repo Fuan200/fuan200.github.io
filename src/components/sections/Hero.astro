@@ -137,6 +137,28 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
         padding-right: 32px;
     }
 
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+        }
+
+        .info {
+            padding-right: 0;
+            align-items: center;
+        }
+
+        footer.no-print {
+            justify-content: center;
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+
     h1 {
         font-size: 2.1rem;
         color: #fdfdfd;
