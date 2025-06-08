@@ -1,7 +1,7 @@
 ---
 interface Props {
 	title: string;
-	basics: { image: string, summary: string, url: string };
+	basics: { label: string, image: string, url: string };
 }
 
 import Navbar from '@/components/Navbar.astro';
@@ -9,7 +9,7 @@ import Navbar from '@/components/Navbar.astro';
 const { currentLocale } = Astro;
 
 const { title, basics } = Astro.props;
-const { image, summary, url } = basics;
+const { label, image, url } = basics;
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ const { image, summary, url } = basics;
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
-		<meta name="description" content={summary} />
+		<meta name="description" content={label} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preload" as="image" href={image} />
@@ -25,8 +25,8 @@ const { image, summary, url } = basics;
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content={summary} />
-		<meta property="og:image" content="" />
+		<meta property="og:description" content={label} />
+		<meta property="og:image" content="{image}" />
 	</head>
 	<body>
 		<Navbar />
