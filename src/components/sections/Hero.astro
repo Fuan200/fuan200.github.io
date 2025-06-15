@@ -157,6 +157,23 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
         img {
             width: 150px;
         }
+
+        footer.no-print {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        footer.no-print a:not(.download-btn) {
+            order: 1;
+            flex: 0 0 auto;
+        }
+        
+        footer.no-print a.download-btn {
+            order: 2;
+            width: calc(100% - 32px);
+            margin-top: 1rem;
+            max-width: calc(42px * 4 + 16px * 3);
+        }
     }
 
     h1 {
@@ -187,11 +204,17 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
         letter-spacing: -0.01rem;
     }
 
+    footer.no-print {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
     footer {
         color: #fdfdfd;
         font-size: 0.65rem;
         display: flex;
-        gap: 12px;
+        gap: 16px;
         margin-top: 8px;
     }
 
@@ -201,17 +224,37 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
         align-items: center;
         justify-content: center;
         border: 2px solid #555;
-        padding: 4px;
-        height: 36px;
-        width: 36px;
-        border-radius: 6px;
+        padding: 6px;
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
         transition: all .3s ease;
+    }
+
+    footer a.download-btn {
+        width: auto;
+        min-width: 140px;
+        font-size: 0.95rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding: 12px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        border: 2px solid #555;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    footer a svg {
+        width: 24px;
+        height: 24px;
     }
 
     footer a:hover {
         background: #444;
         border: 1px solid #333;
-        transform: scale(1.2);
+        transform: scale(1.38);
     }
 
     footer a:hover svg {
@@ -219,9 +262,20 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" &bull; ")
         transform: scale(1.5);
     }
 
+    footer a.download-btn:hover {
+        background-color: #0056b3 !important;
+        border-color: #0056b3 !important;
+        transform: scale(1.05);
+        color: white !important;
+    }
+
+    footer a:not(.download-btn) {
+        border-radius: 50%;
+    }
+
     .download-btn {
-        width: auto; /* Para que se ajuste al texto */
-        min-width: 120px; /* Hace el botón más grande */
+        width: auto;
+        min-width: 120px;
         font-size: 0.85rem;
         font-weight: bold;
         color: white;
