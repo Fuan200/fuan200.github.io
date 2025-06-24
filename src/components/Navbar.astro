@@ -4,10 +4,8 @@ import Translate from "@/icons/translate.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
 const currentPath = Astro.url.pathname;
 
-// Lógica para cambiar idioma
 let toggleLanguage;
 if (lang === "es") {
   toggleLanguage = currentPath === "/" ? "/en/" : `/en${currentPath}`;
@@ -22,52 +20,141 @@ const links = [
 ];
 ---
 
-<nav class="navbar">
-    <ul>
-        {links.map(link => (
-            <li><a href={link.href}>{link.name}</a></li>
-        ))}
-        <li>
-            <a href={toggleLanguage}>
-                <Translate />
-            </a> 
-        </li>
-    </ul>
-</nav>
+<header class="header">
+  <div class="container">
+    <div class="nav-brand">
+      <a href={lang === 'es' ? '/' : '/en/'} class="brand-link">
+        <span class="brand-text">
+          <img src="/src/assets/ico.png" class="raspberry">
+          hello
+        </span>
+      </a>
+    </div>
+
+    <nav class="nav-menu">
+      {links.map(link => (
+        <a href={link.href} class="nav-link">{link.name}</a>
+      ))}
+      <a href={toggleLanguage} class="nav-link language-toggle">
+        <Translate />
+      </a>
+    </nav>
+  </div>
+</header>
 
 <style>
-    .navbar {
-        background-color: #1a1a1a;
-        padding: 1rem;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-  
-    .navbar ul {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        align-items: center;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(31, 31, 31, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+  }
+
+  .container {
+    max-width: 740px; /*1200px*/ 
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .raspberry {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+  }
+
+  .brand-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.2s ease;
+  }
+
+  .brand-link:hover {
+    color: #00c4cc;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00c4cc;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .theme-toggle {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #d1d5db;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .theme-toggle:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+      justify-content: center; 
     }
 
-    .navbar li {
-        display: flex;
-        align-items: center;
+    .nav-brand {
+      display: none;
     }
-  
-    .navbar a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s;
-        font-size: 1.2rem;
+
+    .nav-menu {
+      gap: 1rem;
+      width: 100%;
+      justify-content: center; 
     }
-  
-    .navbar a:hover {
-        color: #00bcd4;
+
+    .nav-link {
+      font-size: 0.9rem;
     }
+  }
 </style>
