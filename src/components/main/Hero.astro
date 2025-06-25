@@ -1,6 +1,12 @@
+---
+const { currentLocale } = Astro;
+
+const mainText = currentLocale === 'en' ? 'Hello Friend NG' : 'Hola Amigo NG';
+---
+
 <section class="hero">
   <div class="hero-content">
-    <h1 class="hero-title">Hello Friend NG</h1>
+    <h1 class="hero-title">{mainText}</h1>
     
     <div class="social-links">
       <a href="https://mastodon.social/@fuanito" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Mastodon"> 

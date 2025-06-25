@@ -5,7 +5,7 @@ export default defineConfig({
     site: 'https://fuanito.me/',
     base: '/',
     i18n: {
-        defaultLocale: 'es',
+        defaultLocale: 'en',
         locales: [ 'es', 'en' ],
         routing: {
             prefixDefaultLocale: false,
