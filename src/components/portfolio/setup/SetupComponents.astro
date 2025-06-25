@@ -1,0 +1,31 @@
+---
+interface Props {
+    components: {
+        name: string;
+        model: string;
+        details: string[];
+        url: string;
+    }[]
+}
+
+import Section from '@/components/portfolio/Section.astro'
+import SetupCardBase from '@/components/portfolio/setup/CardBase.astro'
+
+const { currentLocale } = Astro;
+const { components } = Astro.props;
+
+const titleComponents = currentLocale === 'en' ? 'PC Components' : 'Componentes PC';
+---
+
+<Section>
+    <h1 class="main-title">Setup</h1>
+    <SetupCardBase items={components} title={titleComponents} className="components-grid" />
+</Section>
+
+<style>
+    .main-title {
+        padding-bottom: 10px;
+        font-size: 2rem;
+        margin: 0;
+    }
+</style>

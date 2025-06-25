@@ -4,42 +4,65 @@ import Translate from "@/icons/translate.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
 const currentPath = Astro.url.pathname;
 
 let toggleLanguage;
-if (lang === "es") {
-  toggleLanguage = currentPath === "/" ? "/en/" : `/en${currentPath}`;
+if (lang === "en") {
+  toggleLanguage = currentPath === "/" ? "/es/" : `/es${currentPath}`;
 } else {
-  toggleLanguage = currentPath.replace(/^\/en/, "") || "/";
+  toggleLanguage = currentPath.replace(/^\/es/, "") || "/";
 }
 
 const links = [
-  { name: t('nav.home'), href: lang === 'es' ? '/' : '/en/' },
-  { name: t('nav.blog'), href: lang === 'es' ? '/blog' : '/en/blog' },
-  { name: t('nav.setup'), href: lang === 'es' ? '/setup' : '/en/setup' },
-];
+  { name: t('nav.home'), href: lang === 'en' ? '/' : '/es/' },
+  { name: t('nav.portfolio'), href: lang === 'en' ? '/portfolio' : '/es/portfolio' },
+  // { name: t('nav.blog'), href: lang === 'en' ? '/blog' : '/es/blog' },
+  { name: t('nav.setup'), href: lang === 'en' ? '/setup' : '/es/setup' },
+]
 ---
 
-<header class="header">
-  <div class="container">
-    <div class="nav-brand">
-      <a href={lang === 'es' ? '/' : '/en/'} class="brand-link">
-        <span class="brand-text">
-          <img src="/src/assets/ico.png" class="raspberry">
-          hello
-        </span>
-      </a>
-    </div>
+<!-- 
+Not use -> output: 'server',
 
-    <nav class="nav-menu">
-      {links.map(link => (
-        <a href={link.href} class="nav-link">{link.name}</a>
-      ))}
-      <a href={toggleLanguage} class="nav-link language-toggle">
-        <Translate />
-      </a>
-    </nav>
-  </div>
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import Translate from "@/icons/translate.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const currentPath = Astro.url.pathname;
+const newLang = lang === "en" ? "es" : "en";
+const toggleLanguage = currentPath.replace(/^\/(en|es)/, `/${newLang}`);
+
+const links = [
+  { name: t('nav.home'), href: `/${lang}/` },
+  { name: t('nav.portfolio'), href: `/${lang}/portfolio` },
+  { name: t('nav.blog'), href: `/${lang}/blog` },
+  { name: t('nav.setup'), href: `/${lang}/setup` },
+];
+-->
+
+<header class="header">
+    <div class="container">
+        <div class="nav-brand">
+          <a href={lang === 'en' ? '/' : '/es/'} class="brand-link">
+            <span class="brand-text">
+              <img src="/ico.png" class="raspberry">
+              hello
+            </span>
+          </a>
+        </div>
+        
+        <nav class="nav-menu">
+            {links.map(link => (
+                <a href={link.href} class="nav-link">{link.name}</a>
+            ))}
+            <a href={toggleLanguage} class="nav-link language-toggle">
+                <Translate />
+            </a>
+        </nav>
+    </div>
 </header>
 
 <style>
@@ -55,7 +78,7 @@ const links = [
   }
 
   .container {
-    max-width: 740px; /*1200px*/ 
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -140,19 +163,12 @@ const links = [
   @media (max-width: 768px) {
     .container {
       padding: 0 1rem;
-      justify-content: center; 
     }
-
-    .nav-brand {
-      display: none;
-    }
-
+    
     .nav-menu {
       gap: 1rem;
-      width: 100%;
-      justify-content: center; 
     }
-
+    
     .nav-link {
       font-size: 0.9rem;
     }
