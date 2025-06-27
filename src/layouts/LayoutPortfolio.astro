@@ -4,6 +4,8 @@ interface Props {
 	basics: { label: string, image: string, url: string };
 }
 
+import { ClientRouter } from 'astro:transitions';
+
 const { currentLocale } = Astro;
 
 const { title, basics } = Astro.props;
@@ -13,6 +15,7 @@ const { label, url } = basics;
 <!doctype html>
 <html lang={currentLocale}>
 	<head>
+		<ClientRouter />
 		<meta charset="UTF-8" />
 		<title>{title}</title>
 		<meta name="description" content={label} />
@@ -36,6 +39,10 @@ const { label, url } = basics;
 </html>
 
 <style is:global>
+  :root {
+    view-transition-name: root;
+  }
+
 	html {
 		font-family: Menlo, Monaco, Lucida Console, 'Courier New', monospace;
 		background: #121212;
@@ -99,6 +106,65 @@ const { label, url } = basics;
 	@media print {
 		.print {
 			display: block !important;
+		}
+	}
+
+	/* Transitions */
+	.header {
+		view-transition-name: header-layer;
+		contain: layout;
+	}
+
+	::view-transition-group(header-layer) {
+		animation-duration: 0.5s;
+	}
+
+	.footer {
+		view-transition-name: no-transition;
+		contain: layout;
+	}
+
+	::view-transition-group(no-transition) {
+		animation: none;
+		mix-blend-mode: normal;
+	}
+
+	::view-transition-group(no-transition) {
+		animation: none;
+		mix-blend-mode: normal;
+	}
+
+	::view-transition-group(root) {
+		animation-duration: 0.25s;
+	}
+
+	::view-transition-old(root) {
+		animation: fadeOutScale 0.75s ease both;
+	}
+
+	::view-transition-new(root) {
+		animation: fadeInScale 0.75s ease both 0.3s;
+	}
+
+	@keyframes fadeOutScale {
+		from {
+			opacity: 1;
+			transform: scale(1);
+		}
+		to {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+	}
+
+	@keyframes fadeInScale {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
 		}
 	}
 </style>

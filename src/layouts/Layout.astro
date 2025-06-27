@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+
 const { currentLocale } = Astro;
 const title = currentLocale === 'en' ? 'Hello Friend NG' : 'Hola Amigo NG';
 const description = currentLocale === 'en' ? 'Personal website built with Astro' : 'Sitio web personal desarrollado con Astro';
@@ -8,6 +10,7 @@ const description = currentLocale === 'en' ? 'Personal website built with Astro'
 <!doctype html>
 <html lang={currentLocale}>
     <head>
+        <ClientRouter />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} />
@@ -31,6 +34,7 @@ const description = currentLocale === 'en' ? 'Personal website built with Astro'
 <!-- #00c4cc #6fb5fc-->
 <style is:global>
   :root {
+    view-transition-name: root;
     --color-primary: #00c4cc; /* celeste */
     --color-secondary: #a855f7;
     --color-background: #121212;
@@ -56,6 +60,7 @@ const description = currentLocale === 'en' ? 'Personal website built with Astro'
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    view-transition-name: root;
   }
 
   * {
@@ -146,4 +151,63 @@ const description = currentLocale === 'en' ? 'Personal website built with Astro'
       scroll-behavior: auto !important;
     }
   }
+
+	/* Transitions */
+	.header {
+		view-transition-name: header-layer;
+		contain: layout;
+	}
+
+	::view-transition-group(header-layer) {
+		animation-duration: 0.5s;
+	}
+
+	.footer {
+		view-transition-name: no-transition;
+		contain: layout;
+	}
+
+	::view-transition-group(no-transition) {
+		animation: none;
+		mix-blend-mode: normal;
+	}
+
+	::view-transition-group(no-transition) {
+		animation: none;
+		mix-blend-mode: normal;
+	}
+
+	::view-transition-group(root) {
+		animation-duration: 0.25s;
+	}
+
+	::view-transition-old(root) {
+		animation: fadeOutScale 0.75s ease both;
+	}
+
+	::view-transition-new(root) {
+		animation: fadeInScale 0.75s ease both 0.3s;
+	}
+
+	@keyframes fadeOutScale {
+		from {
+			opacity: 1;
+			transform: scale(1);
+		}
+		to {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+	}
+
+	@keyframes fadeInScale {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
 </style>
