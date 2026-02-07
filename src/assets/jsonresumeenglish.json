@@ -8,7 +8,7 @@
         "email": "juandiazfdez1992@gmail.com",
         "phone": "+52 6291099059",
         "url": "https://fuan200.github.io/",
-        "cv": "/CV_November_25_English.pdf",
+        "cv": "/CV.pdf",
         "summary": "Passionate backend developer and committed student constantly seeking knowledge. With skills in the design and implementation of backend systems, experience in languages such as Python and JavaScript, as well as in handling relational and non-relational databases",
         "location": {
             "address": "",
@@ -38,7 +38,7 @@
             "url": "",
             "startDate": "2025-06-01",
             "endDate": null,
-            "summary": "Software engineer with experience in developing full-stack web applications, and skilled in Linux system administration, server hardening, and containerized infrastructure.",
+            "summary": "Software engineer with experience in developing full-stack web applications, and skilled in Linux system administration, server hardening (port restriction, Fail2Ban, OS auditing), and containerized infrastructure.",
             "highlights": [""]
         },
         {
