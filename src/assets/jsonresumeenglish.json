@@ -33,8 +33,17 @@
 
     "work": [
         {
+            "name": "Veintticinco",
+            "position": "Full Stack Developer",
+            "url": "",
+            "startDate": "2025-06-01",
+            "endDate": null,
+            "summary": "Software engineer with experience in developing full-stack web applications, and skilled in Linux system administration, server hardening, and containerized infrastructure.",
+            "highlights": [""]
+        },
+        {
             "name": "Sphere Tec",
-            "position": "Web Programmer",
+            "position": "FullStack Developer",
             "url": "https://spheretec.org/",
             "startDate": "2024-08-01",
             "endDate": null,
@@ -48,15 +57,6 @@
             "startDate": "2024-02-01",
             "endDate": "2024-06-01",
             "summary": "Web developer specialized in Angular and NestJS, with skills in frontend and backend development, as well as having the role of tester using Jest for unit and integration tests.",
-            "highlights": [""]
-        },
-        {
-            "name": "AgriCam",
-            "position": "Billing Clerk",
-            "url": "",
-            "startDate": "2022-05-01",
-            "endDate": "2023-05-01",
-            "summary": "Experience in billing and administrative management. Proficient in the accurate handling of documents and financial records.",
             "highlights": [""]
         }
     ],
