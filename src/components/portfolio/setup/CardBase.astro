@@ -13,32 +13,28 @@ interface Props {
 const { items, title, className = '' } = Astro.props;
 ---
 
-{title && <h2 class="section-title">{title}</h2>}
+{title && <h2 class='section-title'>{title}</h2>}
 <ul class={`setup-grid ${className}`}>
     {
-    items.map(({ name, model, details, url }) => (
-        <li>
-        <article class="setup-card">
-            <header class="card-header">
-            <h3 class="card-title">
-                <a href={url} target="_blank" title={`Ver más sobre ${name}`} class="card-link">
-                {model}
-                </a>
-            </h3>
-            <p class="card-subtitle">{name}</p>
-            </header>
-            <footer class="card-footer">
-                {
-                    details.map((detail) => {
-                        return (
-                            <span class="detail-tag">{detail}</span>
-                        )
-                    })
-                }  
-            </footer>
-        </article>
-        </li>
-    ))
+        items.map(({ name, model, details, url }) => (
+            <li>
+                <article class='setup-card'>
+                    <header class='card-header'>
+                        <h3 class='card-title'>
+                            <a href={url} target='_blank' title={`Ver más sobre ${name}`} class='card-link'>
+                                {model}
+                            </a>
+                        </h3>
+                        <p class='card-subtitle'>{name}</p>
+                    </header>
+                    <footer class='card-footer'>
+                        {details.map((detail) => {
+                            return <span class='detail-tag'>{detail}</span>;
+                        })}
+                    </footer>
+                </article>
+            </li>
+        ))
     }
 </ul>
 
@@ -58,7 +54,7 @@ const { items, title, className = '' } = Astro.props;
         margin-block: 0;
         padding: 0;
     }
-  
+
     .setup-card {
         border-radius: 8px;
         border: 1px solid #202020;
@@ -69,32 +65,34 @@ const { items, title, className = '' } = Astro.props;
         height: 100%;
         background: #292929;
         color: #fdfdfd;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        transition:
+            transform 0.2s ease-in-out,
+            box-shadow 0.2s ease-in-out;
     }
 
     .setup-card:hover {
         transform: scale(1.05);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
-  
+
     .card-header {
         flex: 1;
     }
-  
+
     .card-title {
         margin-bottom: 4px;
         margin: 0 0 4px 0;
     }
-  
+
     .card-link {
         color: #fdfdfd;
         text-decoration: none;
     }
-  
+
     .card-link:hover {
         text-decoration: underline;
     }
-  
+
     .card-subtitle {
         font-size: 0.85rem;
         line-height: 1.2rem;
@@ -102,14 +100,14 @@ const { items, title, className = '' } = Astro.props;
         color: #b0b0b0;
         margin: 0;
     }
-  
+
     .card-footer {
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
         font-size: 0.6rem;
     }
-  
+
     .detail-tag {
         border-radius: 6px;
         background: #555;
@@ -118,12 +116,12 @@ const { items, title, className = '' } = Astro.props;
         font-weight: 500;
         padding: 0.2rem 0.6rem;
     }
-  
+
     @media (width <= 700px) {
         .setup-grid {
             margin-inline: 0px;
         }
-    
+
         .setup-card {
             border: none;
             box-shadow: 0 1px 1px #444;

@@ -1,21 +1,21 @@
 ---
-import Section from '@/components/portfolio/Section.astro'
+import Section from '@/components/portfolio/Section.astro';
 
-import { skills } from '@cv'
-import Python from '@/icons/python.astro'
-import Bash from '@/icons/bash.astro'
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import Angular from '@/icons/angular.astro'
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import MongoDB from '@/icons/mongodb.astro'
-import Docker from '@/icons/docker.astro'
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Linux from "@/icons/linux.astro"
+import { skills } from '@cv';
+import Python from '@/icons/python.astro';
+import Bash from '@/icons/bash.astro';
+import HTML from '@/icons/html.astro';
+import CSS from '@/icons/css.astro';
+import JavaScript from '@/icons/javascript.astro';
+import TypeScript from '@/icons/type.astro';
+import Angular from '@/icons/angular.astro';
+import Node from '@/icons/node.astro';
+import MySQL from '@/icons/sql.astro';
+import MongoDB from '@/icons/mongodb.astro';
+import Docker from '@/icons/docker.astro';
+import Git from '@/icons/git.astro';
+import GitHub from '@/icons/GitHub.astro';
+import Linux from '@/icons/linux.astro';
 
 const SKILLS_ICONS: Record<string, any> = {
     Python,
@@ -31,8 +31,8 @@ const SKILLS_ICONS: Record<string, any> = {
     Docker,
     Git,
     GitHub,
-    Linux
-}
+    Linux,
+};
 
 const { currentLocale } = Astro;
 const title = currentLocale === 'en' ? 'Skills' : 'Habilidades';
@@ -42,16 +42,16 @@ const title = currentLocale === 'en' ? 'Skills' : 'Habilidades';
     <ul>
         {
             skills.map(({ name }) => {
-                const iconName = name === "Next.js" ? "Next" : name
-                const Icon = SKILLS_ICONS[iconName]        
+                const iconName = name === 'Next.js' ? 'Next' : name;
+                const Icon = SKILLS_ICONS[iconName];
                 return (
                     <li>
                         {Icon && <Icon />} <span>{name}</span>
                     </li>
-                )
+                );
             })
-        }   
-    </ul> 
+        }
+    </ul>
 </Section>
 
 <style>

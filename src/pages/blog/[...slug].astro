@@ -8,10 +8,8 @@ import { getCollection } from 'astro:content';
 import { basics } from '@cv_english';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts
-		.filter((post) => post.data.lang === 'en')
-		.map((post) => ({ params: { slug: post.slug.split('/')[0] }, props: { post } }));
+    const posts = await getCollection('blog');
+    return posts.filter((post) => post.data.lang === 'en').map((post) => ({ params: { slug: post.slug.split('/')[0] }, props: { post } }));
 }
 
 const { post } = Astro.props;
@@ -19,75 +17,77 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title} basics={basics}>
-	<Header />
-	<main>
-		<Section>
-			<article class="post">
-				<header>
-					<p class="meta">
-						<time datetime={post.data.pubDate.toISOString()}>
-							{post.data.pubDate.toLocaleDateString('en-US', {
-								year: 'numeric',
-								month: 'long',
-								day: 'numeric',
-							})}
-						</time>
-					</p>
-					<h1>{post.data.title}</h1>
-					{post.data.description ? <p class="lead">{post.data.description}</p> : null}
-				</header>
-				<div class="content">
-					<Content />
-				</div>
-			</article>
-		</Section>
-	</main>
-	<Footer />
+    <Header />
+    <main>
+        <Section>
+            <article class='post'>
+                <header>
+                    <p class='meta'>
+                        <time datetime={post.data.pubDate.toISOString()}>
+                            {
+                                post.data.pubDate.toLocaleDateString('en-US', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric',
+                                })
+                            }
+                        </time>
+                    </p>
+                    <h1>{post.data.title}</h1>
+                    {post.data.description ? <p class='lead'>{post.data.description}</p> : null}
+                </header>
+                <div class='content'>
+                    <Content />
+                </div>
+            </article>
+        </Section>
+    </main>
+    <Footer />
 </Layout>
 
 <style>
-	main {
-		padding: 6rem 2rem 4rem;
-		margin: auto;
-		width: min(900px, 100%);
-		flex: 1;
-	}
+    main {
+        padding: 6rem 2rem 4rem;
+        margin: auto;
+        width: min(900px, 100%);
+        flex: 1;
+    }
 
-	.post header {
-		display: grid;
-		gap: 0.75rem;
-		margin-bottom: 2rem;
-	}
+    .post header {
+        display: grid;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
 
-	.post h1 {
-		font-size: clamp(2.4rem, 3vw, 3.2rem);
-	}
+    .post h1 {
+        font-size: clamp(2.4rem, 3vw, 3.2rem);
+    }
 
-	.meta {
-		font-size: 0.85rem;
-		color: #9da3af;
-	}
+    .meta {
+        font-size: 0.85rem;
+        color: #9da3af;
+    }
 
-	.lead {
-		font-size: 1rem;
-		color: #cbd5f5;
-	}
+    .lead {
+        font-size: 1rem;
+        color: #cbd5f5;
+    }
 
-	.content :global(p) {
-		margin-bottom: 1rem;
-		text-align: justify;
-	}
+    .content :global(p) {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
 
-	.content :global(ul) {
-		list-style: disc;
-		margin: 1rem 0 1rem 1.5rem;
-	}
+    .content :global(ul) {
+        list-style: disc;
+        margin: 1rem 0 1rem 1.5rem;
+    }
 
-	.content :global(li) {
-		margin-bottom: 0.5rem;
-	}
+    .content :global(li) {
+        margin-bottom: 0.5rem;
+    }
 
-	.content :global(a) {
-		color: #00c4cc;
-	}
+    .content :global(a) {
+        color: #00c4cc;
+    }
 </style>

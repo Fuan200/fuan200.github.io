@@ -5,11 +5,11 @@ interface Props {
         model: string;
         details: string[];
         url: string;
-  }[]
+    }[];
 }
 
-import Section from '@/components/portfolio/Section.astro'
-import SetupCardBase from '@/components/portfolio/setup/CardBase.astro'
+import Section from '@/components/portfolio/Section.astro';
+import SetupCardBase from '@/components/portfolio/setup/CardBase.astro';
 
 const { currentLocale } = Astro;
 const { peripherals } = Astro.props;
@@ -18,5 +18,5 @@ const titlePeripherals = currentLocale === 'en' ? 'Peripherals' : 'Perifericos';
 ---
 
 <Section>
-    <SetupCardBase items={peripherals} title={titlePeripherals} className="peripherals-grid" />
+    <SetupCardBase items={peripherals} title={titlePeripherals} className='peripherals-grid' />
 </Section>

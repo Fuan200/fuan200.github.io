@@ -10,7 +10,7 @@ podman run --name portfolio -p 4321:4321 localhost/node-astro:latest
 git pull
 
 podman-compose build
-podman-compose down 
+podman-compose down
 
 podman-compose up -d
 ```

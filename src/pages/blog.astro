@@ -8,23 +8,23 @@ import { getCollection } from 'astro:content';
 import { basics } from '@cv_english';
 
 const posts = (await getCollection('blog'))
-	.filter((post) => post.data.lang === 'en')
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    .filter((post) => post.data.lang === 'en')
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Layout title={`Blog`} basics={basics}>
     <Header />
-	<main>
-		<BlogList posts={posts} locale="en" basePath="/blog" />
-	</main>
+    <main>
+        <BlogList posts={posts} locale='en' basePath='/blog' />
+    </main>
     <Footer />
 </Layout>
 
 <style>
-	main {
-		padding: 4rem;
-		margin: auto;
-		width: 100%;
-		flex: 1;
-	}
+    main {
+        padding: 4rem;
+        margin: auto;
+        width: 100%;
+        flex: 1;
+    }
 </style>

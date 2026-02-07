@@ -1,49 +1,53 @@
 ---
 interface Props {
-  education: {
-    institution: string;
-    area: string;
-    studyType: string;
-    startDate: string;
-    endDate: string;
-    score: number;
-  }[],
+    education: {
+        institution: string;
+        area: string;
+        studyType: string;
+        startDate: string;
+        endDate: string;
+        score: number;
+    }[];
 }
 
-import Section from '@/components/portfolio/Section.astro'
+import Section from '@/components/portfolio/Section.astro';
 
 const { education } = Astro.props;
 const { currentLocale } = Astro;
 
-const title = currentLocale === 'en' ? 'Education' : 'Educación'
-const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:'
+const title = currentLocale === 'en' ? 'Education' : 'Educación';
+const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:';
 ---
 
 <Section title={title}>
     <ul>
-        {education.map(({ institution, startDate, endDate, area, studyType, score}) => {
-            const startYear = new Date(startDate).getFullYear()
-            const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual"
-            const years = `${startYear} - ${endYear}`
-            return (
-                <li>
-                    <article>
-                        <header>
-                            <div>
-                                <h3>{institution}</h3>
-                                <h4>{area}</h4>     
-                            </div> 
-                            <time>{years}</time>
-                        </header>
-                        <footer>
-                            <p>{studyType}</p>
-                            <p>{score_text} {score}</p>
-                        </footer>
-                    </article>
-                </li>
-            )
-        })}    
-    </ul> 
+        {
+            education.map(({ institution, startDate, endDate, area, studyType, score }) => {
+                const startYear = new Date(startDate).getFullYear();
+                const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual';
+                const years = `${startYear} - ${endYear}`;
+                return (
+                    <li>
+                        <article>
+                            <header>
+                                <div>
+                                    <h3>{institution}</h3>
+                                    <h4>{area}</h4>
+                                </div>
+                                <time>{years}</time>
+                            </header>
+                            <footer>
+                                <p>{studyType}</p>
+                                <p>
+                                    {score_text} {score}
+                                </p>
+                            </footer>
+                        </article>
+                    </li>
+                );
+            })
+        }
+    </ul>
 </Section>
 
 <style>
@@ -71,7 +75,7 @@ const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:'
     }
 
     time {
-        color:#bbb;
+        color: #bbb;
         font-size: 0.85rem;
     }
 </style>

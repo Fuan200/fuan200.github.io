@@ -10,27 +10,27 @@ import Hero from '@/components/portfolio/sections/Hero.astro';
 import Projects from '@/components/portfolio/sections/Projects.astro';
 import Skills from '@/components/portfolio/sections/Skills.astro';
 
-import { basics, work, education, projects } from '@cv_english'
-const { short_name } = basics
+import { basics, work, education, projects } from '@cv_english';
+const { short_name } = basics;
 ---
 
 <Layout title={`${short_name}`} basics={basics}>
     <Header />
-	<main>
-		<Hero basics={basics}/>
-		<About basics={basics}/>
-		<Experience work={work}/>
-		<Education education={education}/>
-		<Projects projects={projects}/>
-		<Skills/>
-	</main>
+    <main>
+        <Hero basics={basics} />
+        <About basics={basics} />
+        <Experience work={work} />
+        <Education education={education} />
+        <Projects projects={projects} />
+        <Skills />
+    </main>
     <Footer />
 </Layout>
 
 <style>
-	main {
-		padding: 4rem;
-		margin: auto;
-		width: 100%;
-	}
+    main {
+        padding: 4rem;
+        margin: auto;
+        width: 100%;
+    }
 </style>

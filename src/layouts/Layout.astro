@@ -11,203 +11,213 @@ const description = currentLocale === 'en' ? 'Personal website built with Astro'
 <html lang={currentLocale}>
     <head>
         <ClientRouter />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={description} />
-        <meta name="generator" content={Astro.generator} />
-        
-        <link rel="icon" type="image/svg+xml" href="/ico.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='description' content={description} />
+        <meta name='generator' content={Astro.generator} />
 
-        <meta property="og:image" content="https://avatars.githubusercontent.com/u/104170612?v=4" />
-        
+        <link rel='icon' type='image/svg+xml' href='/ico.png' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap' rel='stylesheet' />
+
+        <meta property='og:image' content='https://avatars.githubusercontent.com/u/104170612?v=4' />
+
         <title>{title}</title>
     </head>
     <body>
-        <div class="app">
+        <div class='app'>
             <slot />
         </div>
     </body>
 </html>
 <!-- #00c4cc #6fb5fc-->
 <style is:global>
-  :root {
-    view-transition-name: root;
-    --color-primary: #00c4cc; /* celeste */
-    --color-secondary: #a855f7;
-    --color-background: #121212;
-    --color-surface: #1f1f1f;
-    --color-text-primary: #ffffff;
-    --color-text-secondary: #d1d5db;
-    --color-text-muted: #9ca3af;
-    --color-border: rgba(255, 255, 255, 0.1);
-    
-    font-family: Menlo, Monaco, Lucida Console, 'Courier New', monospace;
-    
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    
-    --border-radius-sm: 0.25rem;
-    --border-radius-md: 0.5rem;
-    --border-radius-lg: 1rem;
-    
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    view-transition-name: root;
-  }
+    :root {
+        view-transition-name: root;
+        --color-primary: #00c4cc; /* celeste */
+        --color-secondary: #a855f7;
+        --color-background: #121212;
+        --color-surface: #1f1f1f;
+        --color-text-primary: #ffffff;
+        --color-text-secondary: #d1d5db;
+        --color-text-muted: #9ca3af;
+        --color-border: rgba(255, 255, 255, 0.1);
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            'Courier New',
+            monospace;
 
-  html {
-    font-family: var(--font-family);
-    scroll-behavior: smooth;
-  }
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+        --spacing-2xl: 3rem;
 
-  body {
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+        --border-radius-sm: 0.25rem;
+        --border-radius-md: 0.5rem;
+        --border-radius-lg: 1rem;
 
-  .app {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    /* font-weight: bold; */
-    line-height: 1.2;
-    letter-spacing: -0.025em;
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  button {
-    font-family: inherit;
-    font-size: inherit;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Focus styles */
-  :focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-  }
-
-  /* Scrollbar styles */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--color-background);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-text-muted);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-text-secondary);
-  }
-
-  /* Selection styles */
-  ::selection {
-    background: var(--color-primary);
-    color: var(--color-background);
-  }
-
-  /* Reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        view-transition-name: root;
     }
-  }
 
-	/* Transitions */
-	.header {
-		view-transition-name: header-layer;
-		contain: layout;
-	}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-	::view-transition-group(header-layer) {
-		animation-duration: 0.5s;
-	}
+    html {
+        font-family: var(--font-family);
+        scroll-behavior: smooth;
+    }
 
-	.footer {
-		view-transition-name: no-transition;
-		contain: layout;
-	}
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-	::view-transition-group(no-transition) {
-		animation: none;
-		mix-blend-mode: normal;
-	}
+    .app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-	::view-transition-group(no-transition) {
-		animation: none;
-		mix-blend-mode: normal;
-	}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        /* font-weight: bold; */
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    }
 
-	::view-transition-group(root) {
-		animation-duration: 0.25s;
-	}
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-	::view-transition-old(root) {
-		animation: fadeOutScale 0.75s ease both;
-	}
+    button {
+        font-family: inherit;
+        font-size: inherit;
+    }
 
-	::view-transition-new(root) {
-		animation: fadeInScale 0.75s ease both 0.3s;
-	}
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-	@keyframes fadeOutScale {
-		from {
-			opacity: 1;
-			transform: scale(1);
-		}
-		to {
-			opacity: 0;
-			transform: scale(0.9);
-		}
-	}
+    /* Focus styles */
+    :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
 
-	@keyframes fadeInScale {
-		from {
-			opacity: 0;
-			transform: scale(0.9);
-		}
-		to {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--color-background);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-text-muted);
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-text-secondary);
+    }
+
+    /* Selection styles */
+    ::selection {
+        background: var(--color-primary);
+        color: var(--color-background);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    /* Transitions */
+    .header {
+        view-transition-name: header-layer;
+        contain: layout;
+    }
+
+    ::view-transition-group(header-layer) {
+        animation-duration: 0.5s;
+    }
+
+    .footer {
+        view-transition-name: no-transition;
+        contain: layout;
+    }
+
+    ::view-transition-group(no-transition) {
+        animation: none;
+        mix-blend-mode: normal;
+    }
+
+    ::view-transition-group(no-transition) {
+        animation: none;
+        mix-blend-mode: normal;
+    }
+
+    ::view-transition-group(root) {
+        animation-duration: 0.25s;
+    }
+
+    ::view-transition-old(root) {
+        animation: fadeOutScale 0.75s ease both;
+    }
+
+    ::view-transition-new(root) {
+        animation: fadeInScale 0.75s ease both 0.3s;
+    }
+
+    @keyframes fadeOutScale {
+        from {
+            opacity: 1;
+            transform: scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+    }
+
+    @keyframes fadeInScale {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
 </style>

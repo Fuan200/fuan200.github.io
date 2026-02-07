@@ -1,16 +1,16 @@
 ---
 interface Props {
-  work: {
-    name: string;
-    position: string;
-    startDate: string;
-    endDate: string | null;
-    summary: string;
-    url: string;
-  }[],
+    work: {
+        name: string;
+        position: string;
+        startDate: string;
+        endDate: string | null;
+        summary: string;
+        url: string;
+    }[];
 }
 
-import Section from "@/components/portfolio/Section.astro"
+import Section from '@/components/portfolio/Section.astro';
 
 const { currentLocale } = Astro;
 const { work } = Astro.props;
@@ -19,134 +19,133 @@ const present = currentLocale === 'en' ? 'Present' : 'Actual';
 ---
 
 <Section title={title}>
-  <ul>
-    {
-      work.map(
-        ({ name, startDate, endDate, position, summary, url }) => {
-          const formatDate = (dateString: string | null): string => {
-          if (!dateString) return present;
-            const date = new Date(dateString)
-            const month = String(date.getMonth() + 2).padStart(2, "0")
-            const year = date.getFullYear()
+    <ul>
+        {
+            work.map(({ name, startDate, endDate, position, summary, url }) => {
+                const formatDate = (dateString: string | null): string => {
+                    if (!dateString) return present;
+                    const date = new Date(dateString);
+                    const month = String(date.getMonth() + 2).padStart(2, '0');
+                    const year = date.getFullYear();
 
-            return `${month}/${year}`
-          }
+                    return `${month}/${year}`;
+                };
 
-          return (
-            <li>
-              <article>
-                <header>
-                  <div>
-                    <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
-                        {name}
-                      </a>
-                    </h3>
-                    <h4>{position}</h4>
-                  </div>
+                return (
+                    <li>
+                        <article>
+                            <header>
+                                <div>
+                                    <h3>
+                                        <a href={url} title={`Ver ${name}`} target='_blank'>
+                                            {name}
+                                        </a>
+                                    </h3>
+                                    <h4>{position}</h4>
+                                </div>
 
-                  <div>
-                    <time 
-                      datetime={startDate}
-                      data-title={startDate}>
-                        {formatDate(startDate)}
-                    </time>
-                    {" - "}
-                    <time 
-                      datetime={endDate}
-                      data-title={endDate}>
-                        {formatDate(endDate)}
-                    </time>
-                  </div>
-                </header>
+                                <div>
+                                    <time datetime={startDate} data-title={startDate}>
+                                        {formatDate(startDate)}
+                                    </time>
+                                    {' - '}
+                                    <time datetime={endDate} data-title={endDate}>
+                                        {formatDate(endDate)}
+                                    </time>
+                                </div>
+                            </header>
 
-                <footer>
-                  <p>{summary}</p>
-                </footer>
-              </article>
-            </li>
-          )
+                            <footer>
+                                <p>{summary}</p>
+                            </footer>
+                        </article>
+                    </li>
+                );
+            })
         }
-      )
-    }
-  </ul>
+    </ul>
 </Section>
 
 <style>
-  p {
-		text-align: justify;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #fdfdfd;
-  }
-
-  article a {
-    color: #fdfdfd;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #bbb;
-    font-weight: 400;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #bbb;
-    font-size: 0.85rem;
-    min-width: 102px;
-    cursor: default;
-  }
-
-  [data-title]:hover:after {
-    opacity: 1;
-    transition: all 0.1s ease-in-out 0.5s;
-    visibility: visible;
-  }
-
-  [data-title]:after {
-    content: attr(data-title);
-    background-color: #333;
-    color: #fff;
-    font-size: .75rem;
-    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;;
-    position: absolute;
-    padding: .2rem .5rem;
-    bottom: -1.4rem;
-    left: 50%;
-    white-space: nowrap;
-    box-shadow: 1px 1px 1px #222222;
-    opacity: 0;
-    border: 1px solid #111111;
-    z-index: 99999;
-    visibility: hidden;
-    border-radius: 6px;
-  }
-
-  [data-title] {
-    position: relative;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
+    p {
+        text-align: justify;
     }
-  }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    article h3 {
+        font-weight: 500;
+        color: #fdfdfd;
+    }
+
+    article a {
+        color: #fdfdfd;
+    }
+
+    article a:hover {
+        text-decoration: underline;
+    }
+
+    article h4 {
+        color: #bbb;
+        font-weight: 400;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    time {
+        color: #bbb;
+        font-size: 0.85rem;
+        min-width: 102px;
+        cursor: default;
+    }
+
+    [data-title]:hover:after {
+        opacity: 1;
+        transition: all 0.1s ease-in-out 0.5s;
+        visibility: visible;
+    }
+
+    [data-title]:after {
+        content: attr(data-title);
+        background-color: #333;
+        color: #fff;
+        font-size: 0.75rem;
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            'Courier New',
+            monospace;
+        position: absolute;
+        padding: 0.2rem 0.5rem;
+        bottom: -1.4rem;
+        left: 50%;
+        white-space: nowrap;
+        box-shadow: 1px 1px 1px #222222;
+        opacity: 0;
+        border: 1px solid #111111;
+        z-index: 99999;
+        visibility: hidden;
+        border-radius: 6px;
+    }
+
+    [data-title] {
+        position: relative;
+    }
+
+    @media (width <= 700px) {
+        time {
+            text-align: right;
+        }
+    }
 </style>

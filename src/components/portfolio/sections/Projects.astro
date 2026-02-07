@@ -6,10 +6,10 @@ interface Props {
         description: string;
         highlights: string[];
         url: string;
-    }[],
+    }[];
 }
 
-import Section from '@/components/portfolio/Section.astro'
+import Section from '@/components/portfolio/Section.astro';
 
 const { currentLocale } = Astro;
 const { projects } = Astro.props;
@@ -17,29 +17,27 @@ const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
 ---
 
 <Section title={title}>
-    <div class="projects-container">
+    <div class='projects-container'>
         {
             projects.map(({ url, description, highlights, name, isActive }) => {
                 return (
-                    <article class="project-card">
+                    <article class='project-card'>
                         <header>
                             <h3>
-                                <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>
-                                    {name}  
+                                <a href={url} target='_blank' title={`Ver el proyecto ${name}`}>
+                                    {name}
                                 </a>
-                                {isActive && <span class="active-indicator">&bull;</span>}
+                                {isActive && <span class='active-indicator'>&bull;</span>}
                             </h3>
-                            <p class="project-description">{description}</p>
-                        </header>    
-                        <footer class="project-tags">
-                            {
-                                highlights.map((highlight) => (
-                                    <span class="tag">{highlight}</span>
-                                ))
-                            }  
+                            <p class='project-description'>{description}</p>
+                        </header>
+                        <footer class='project-tags'>
+                            {highlights.map((highlight) => (
+                                <span class='tag'>{highlight}</span>
+                            ))}
                         </footer>
-                    </article>    
-                )
+                    </article>
+                );
             })
         }
     </div>
@@ -120,8 +118,13 @@ const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
     }
 
     @keyframes flicker {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.25; }
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.25;
+        }
     }
 
     /* Mobile styles */
@@ -149,7 +152,7 @@ const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
         .project-description {
             font-size: 0.85rem;
         }
-        
+
         .tag {
             font-size: 0.65rem;
             padding: 0.25rem 0.6rem;

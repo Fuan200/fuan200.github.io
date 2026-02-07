@@ -1,6 +1,6 @@
 ---
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import Translate from "@/icons/translate.astro";
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import Translate from '@/icons/translate.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -8,18 +8,18 @@ const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
 
 let toggleLanguage;
-if (lang === "en") {
-  toggleLanguage = currentPath === "/" ? "/es/" : `/es${currentPath}`;
+if (lang === 'en') {
+    toggleLanguage = currentPath === '/' ? '/es/' : `/es${currentPath}`;
 } else {
-  toggleLanguage = currentPath.replace(/^\/es/, "") || "/";
+    toggleLanguage = currentPath.replace(/^\/es/, '') || '/';
 }
 
 const links = [
-  { name: t('nav.home'), href: lang === 'en' ? '/' : '/es/' },
-  { name: t('nav.portfolio'), href: lang === 'en' ? '/portfolio' : '/es/portfolio' },
-  { name: t('nav.blog'), href: lang === 'en' ? '/blog' : '/es/blog' },
-  { name: t('nav.setup'), href: lang === 'en' ? '/setup' : '/es/setup' },
-]
+    { name: t('nav.home'), href: lang === 'en' ? '/' : '/es/' },
+    { name: t('nav.portfolio'), href: lang === 'en' ? '/portfolio' : '/es/portfolio' },
+    { name: t('nav.blog'), href: lang === 'en' ? '/blog' : '/es/blog' },
+    { name: t('nav.setup'), href: lang === 'en' ? '/setup' : '/es/setup' },
+];
 ---
 
 <!-- 
@@ -42,23 +42,26 @@ const links = [
   { name: t('nav.setup'), href: `/${lang}/setup` },
 ];
 -->
-
-<header class="header">
-    <div class="container">
-        <div class="nav-brand">
-          <a href={lang === 'en' ? '/' : '/es/'} class="brand-link">
-            <span class="brand-text">
-              <img src="/ico.png" class="raspberry">
-              hello
-            </span>
-          </a>
+<header class='header'>
+    <div class='container'>
+        <div class='nav-brand'>
+            <a href={lang === 'en' ? '/' : '/es/'} class='brand-link'>
+                <span class='brand-text'>
+                    <img src='/ico.png' class='raspberry' />
+                    hello
+                </span>
+            </a>
         </div>
-        
-        <nav class="nav-menu">
-            {links.map(link => (
-                <a href={link.href} class={`nav-link ${currentPath === link.href ? 'active' : ''}`}>{link.name}</a> // <a href={link.href} class="nav-link">{link.name}</a>
-            ))}
-            <a href={toggleLanguage} class="nav-link language-toggle">
+
+        <nav class='nav-menu'>
+            {
+                links.map((link) => (
+                    <a href={link.href} class={`nav-link ${currentPath === link.href ? 'active' : ''}`}>
+                        {link.name}
+                    </a> // <a href={link.href} class="nav-link">{link.name}</a>
+                ))
+            }
+            <a href={toggleLanguage} class='nav-link language-toggle'>
                 <Translate />
             </a>
         </nav>
@@ -66,120 +69,120 @@ const links = [
 </header>
 
 <style>
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(31, 31, 31, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    padding: 1rem 0;
-  }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(31, 31, 31, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 1rem 0;
+    }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .raspberry {
-    width: 2rem;
-    height: 2rem;
-    vertical-align: middle;
-  }
-
-  .brand-link {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.25rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    transition: color 0.2s ease;
-  }
-
-  .brand-link:hover {
-    color: #00c4cc;
-  }
-
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .nav-link {
-    color: #d1d5db;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 400;
-    transition: color 0.2s ease;
-    position: relative;
-  }
-
-  .nav-link:hover {
-    color: #ffffff;
-  }
-
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #00c4cc;
-    transition: width 0.3s ease;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  .nav-link.active {
-      color: #00c4cc !important;
-  }
-
-  .nav-link.active::after {
-      width: 100% !important;
-      display: none;
-  }
-
-  .theme-toggle {
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #d1d5db;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .theme-toggle:hover {
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  @media (max-width: 768px) {
     .container {
-      padding: 0 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    
+
+    .raspberry {
+        width: 2rem;
+        height: 2rem;
+        vertical-align: middle;
+    }
+
+    .brand-link {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        transition: color 0.2s ease;
+    }
+
+    .brand-link:hover {
+        color: #00c4cc;
+    }
+
     .nav-menu {
-      gap: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
     }
-    
+
     .nav-link {
-      font-size: 0.9rem;
+        color: #d1d5db;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 400;
+        transition: color 0.2s ease;
+        position: relative;
     }
-  }
+
+    .nav-link:hover {
+        color: #ffffff;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #00c4cc;
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .nav-link.active {
+        color: #00c4cc !important;
+    }
+
+    .nav-link.active::after {
+        width: 100% !important;
+        display: none;
+    }
+
+    .theme-toggle {
+        background: none;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #d1d5db;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-toggle:hover {
+        color: #ffffff;
+        border-color: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .nav-menu {
+            gap: 1rem;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+        }
+    }
 </style>

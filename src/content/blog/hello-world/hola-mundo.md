@@ -1,8 +1,8 @@
 ---
-title: "Hola Mundo!!!"
-description: "Primer post del blog en Astro."
+title: 'Hola Mundo!!!'
+description: 'Primer post del blog en Astro.'
 pubDate: 2026-02-01
-tags: ["astro", "blog"]
+tags: ['astro', 'blog']
 lang: es
 ---
 

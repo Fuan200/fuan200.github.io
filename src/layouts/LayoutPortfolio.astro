@@ -1,7 +1,7 @@
 ---
 interface Props {
-	title: string;
-	basics: { label: string, image: string, url: string };
+    title: string;
+    basics: { label: string; image: string; url: string };
 }
 
 import { ClientRouter } from 'astro:transitions';
@@ -14,157 +14,179 @@ const { label, url } = basics;
 
 <!doctype html>
 <html lang={currentLocale}>
-	<head>
-		<ClientRouter />
-		<meta charset="UTF-8" />
-		<title>{title}</title>
-		<meta name="description" content={label} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/ico.png" />
-		<link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/104170612?v=4" />
+    <head>
+        <ClientRouter />
+        <meta charset='UTF-8' />
+        <title>{title}</title>
+        <meta name='description' content={label} />
+        <meta name='viewport' content='width=device-width' />
+        <link rel='icon' type='image/svg+xml' href='/ico.png' />
+        <link rel='preload' as='image' href='https://avatars.githubusercontent.com/u/104170612?v=4' />
 
-		<meta property="og:url" content={url} />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={label} />
-		<meta property="og:image" content="https://avatars.githubusercontent.com/u/104170612?v=4" />
-		<meta property="og:image:width" content="256" />
-		<meta property="og:image:height" content="256" />
-	</head>
-	<body>
-		<div class="app">
-			<slot />
-		</div>
-	</body>
+        <meta property='og:url' content={url} />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={title} />
+        <meta property='og:description' content={label} />
+        <meta property='og:image' content='https://avatars.githubusercontent.com/u/104170612?v=4' />
+        <meta property='og:image:width' content='256' />
+        <meta property='og:image:height' content='256' />
+    </head>
+    <body>
+        <div class='app'>
+            <slot />
+        </div>
+    </body>
 </html>
 
 <style is:global>
-  :root {
-    view-transition-name: root;
-  }
+    :root {
+        view-transition-name: root;
+    }
 
-	html {
-		font-family: Menlo, Monaco, Lucida Console, 'Courier New', monospace;
-		background: #121212;
-		color: #e0e0e0;
-		letter-spacing: -0.011rem;
-	}
+    html {
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            'Courier New',
+            monospace;
+        background: #121212;
+        color: #e0e0e0;
+        letter-spacing: -0.011rem;
+    }
 
-	body, figure {
-		margin: 0;
-		/* padding: 0; */
-		background: #121212;
-		color: #e0e0e0;
-		padding-top: 2rem;
-	}
+    body,
+    figure {
+        margin: 0;
+        /* padding: 0; */
+        background: #121212;
+        color: #e0e0e0;
+        padding-top: 2rem;
+    }
 
-	.app {
-		min-height: calc(100vh - 2rem);
-		display: flex;
-		flex-direction: column;
-	}
+    .app {
+        min-height: calc(100vh - 2rem);
+        display: flex;
+        flex-direction: column;
+    }
 
-	a {
-		text-decoration: none;
-		color: #bb86fc;
-	}
+    a {
+        text-decoration: none;
+        color: #bb86fc;
+    }
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-	*, *::before, *::after {
-		box-sizing: border-box;
-	}
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 
-	h1, h2, h3, h4 {
-		margin: 0;
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		color: #ffffff;
-	}
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0;
+        font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            'Segoe UI',
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            'Open Sans',
+            'Helvetica Neue',
+            sans-serif;
+        color: #ffffff;
+    }
 
-	p {
-		color: #b0b0b0;
-		font-size: .92rem;
-		line-height: 1.5;
-		margin: 0;
-		text-wrap: pretty;
-	}
+    p {
+        color: #b0b0b0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+        margin: 0;
+        text-wrap: pretty;
+    }
 
-	@media print {
-		.no-print {
-			display: none !important;
-		}
-	}
+    @media print {
+        .no-print {
+            display: none !important;
+        }
+    }
 
-	.print {
-		display: none !important;
-	}
+    .print {
+        display: none !important;
+    }
 
-	@media print {
-		.print {
-			display: block !important;
-		}
-	}
+    @media print {
+        .print {
+            display: block !important;
+        }
+    }
 
-	/* Transitions */
-	.header {
-		view-transition-name: header-layer;
-		contain: layout;
-	}
+    /* Transitions */
+    .header {
+        view-transition-name: header-layer;
+        contain: layout;
+    }
 
-	::view-transition-group(header-layer) {
-		animation-duration: 0.5s;
-	}
+    ::view-transition-group(header-layer) {
+        animation-duration: 0.5s;
+    }
 
-	.footer {
-		view-transition-name: no-transition;
-		contain: layout;
-	}
+    .footer {
+        view-transition-name: no-transition;
+        contain: layout;
+    }
 
-	::view-transition-group(no-transition) {
-		animation: none;
-		mix-blend-mode: normal;
-	}
+    ::view-transition-group(no-transition) {
+        animation: none;
+        mix-blend-mode: normal;
+    }
 
-	::view-transition-group(no-transition) {
-		animation: none;
-		mix-blend-mode: normal;
-	}
+    ::view-transition-group(no-transition) {
+        animation: none;
+        mix-blend-mode: normal;
+    }
 
-	::view-transition-group(root) {
-		animation-duration: 0.25s;
-	}
+    ::view-transition-group(root) {
+        animation-duration: 0.25s;
+    }
 
-	::view-transition-old(root) {
-		animation: fadeOutScale 0.75s ease both;
-	}
+    ::view-transition-old(root) {
+        animation: fadeOutScale 0.75s ease both;
+    }
 
-	::view-transition-new(root) {
-		animation: fadeInScale 0.75s ease both 0.3s;
-	}
+    ::view-transition-new(root) {
+        animation: fadeInScale 0.75s ease both 0.3s;
+    }
 
-	@keyframes fadeOutScale {
-		from {
-			opacity: 1;
-			transform: scale(1);
-		}
-		to {
-			opacity: 0;
-			transform: scale(0.9);
-		}
-	}
+    @keyframes fadeOutScale {
+        from {
+            opacity: 1;
+            transform: scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+    }
 
-	@keyframes fadeInScale {
-		from {
-			opacity: 0;
-			transform: scale(0.9);
-		}
-		to {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
+    @keyframes fadeInScale {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
 </style>
