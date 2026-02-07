@@ -1,0 +1,157 @@
+---
+interface Props {
+	posts: Array<{
+		slug: string;
+		data: {
+			title: string;
+			description?: string;
+			pubDate: Date;
+			tags?: string[];
+		};
+	}>;
+	locale?: 'en' | 'es';
+	basePath: string;
+	title?: string;
+	intro?: string;
+}
+
+import Section from '@/components/portfolio/Section.astro';
+
+const {
+	posts,
+	locale = 'en',
+	basePath,
+	title = 'Blog',
+	intro,
+} = Astro.props;
+
+const dateLocale = locale === 'es' ? 'es-ES' : 'en-US';
+const defaultIntro =
+	locale === 'es'
+		? 'Notas, experimentos y write-ups de trabajo reciente.'
+		: 'Notes, experiments, and write-ups from recent work.';
+---
+
+<Section>
+	<section class="hero">
+		<h1>{title}</h1>
+		<p>{intro ?? defaultIntro}</p>
+	</section>
+	<section class="post-list">
+		{posts.map((post) => (
+			<article class="post-card">
+				<div class="post-meta">
+					<time datetime={post.data.pubDate.toISOString()}>
+						{post.data.pubDate.toLocaleDateString(dateLocale, {
+							year: 'numeric',
+							month: 'short',
+							day: 'numeric',
+						})}
+					</time>
+					{post.data.tags?.length ? (
+						<ul class="tags">
+							{post.data.tags.map((tag) => (
+								<li class="tag">{tag}</li>
+							))}
+						</ul>
+					) : null}
+				</div>
+				<h2>
+					<a class="post-title-link" href={`${basePath}/${post.slug.split('/')[0]}`}>
+						{post.data.title}
+					</a>
+				</h2>
+				{post.data.description ? <p>{post.data.description}</p> : null}
+			</article>
+		))}
+	</section>
+</Section>
+
+<style>
+	.hero {
+		margin-bottom: 3rem;
+	}
+
+	.hero h1 {
+		font-size: clamp(2.2rem, 3vw, 3rem);
+		margin-bottom: 0.75rem;
+	}
+
+	.post-list {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.post-card {
+		padding: 1.75rem;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		border-radius: 1.25rem;
+		background: rgba(21, 21, 21, 0.9);
+		box-shadow: 0 18px 32px rgba(0, 0, 0, 0.25);
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.post-title-link {
+		color: #d1d5db;
+		text-decoration: none;
+		font-size: 1.5rem;
+		font-weight: 600;
+		transition: color 0.2s ease;
+		position: relative;
+		display: inline-block;
+	}
+
+	.post-title-link:hover {
+		color: #ffffff;
+	}
+
+	.post-title-link::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: #00c4cc;
+		transition: width 0.3s ease;
+	}
+
+	.post-title-link:hover::after {
+		width: 100%;
+	}
+
+	.post-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		align-items: center;
+		font-size: 0.85rem;
+		color: #9da3af;
+	}
+
+	.tags {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.tag {
+		padding: 0.2rem 0.6rem;
+		background: rgba(0, 196, 204, 0.15);
+		border-radius: 999px;
+		color: #8cf0f5;
+		font-size: 0.75rem;
+	}
+
+	.read-more {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		color: #00c4cc;
+		font-weight: 500;
+	}
+
+	.read-more:hover {
+		color: #8cf0f5;
+	}
+</style>
