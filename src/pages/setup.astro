@@ -1,15 +1,14 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import Layout from '@/layouts/LayoutPortfolio.astro';
+import Layout from '@/layouts/LayoutGeneral.astro';
 import SetupComponents from '@/components/portfolio/setup/SetupComponents.astro';
 import Peripherals from '@/components/portfolio/setup/Peripherals.astro';
 
-import { basics, setup } from '@cv_english';
-const { name, label } = basics;
+import { setup } from '@cv_english';
 ---
 
-<Layout title={`Setup to ${name} - ${label}`} basics={basics}>
+<Layout title={`Setup`}>
     <Header />
     <main>
         <SetupComponents components={setup.components} />
