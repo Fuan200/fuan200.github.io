@@ -5,7 +5,9 @@ import Translate from '@/icons/translate.astro';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const normalize = (path: string): string => path.replace(/\/+$/, '') || '/';
+
+const currentPath = normalize(Astro.url.pathname);
 
 let toggleLanguage;
 if (lang === 'en') {
@@ -56,9 +58,9 @@ const links = [
         <nav class='nav-menu'>
             {
                 links.map((link) => (
-                    <a href={link.href}class={`nav-link ${currentPath === link.href.replace(/\/$/, '') ? 'active' : ''}`}>
+                    <a href={link.href} class={`nav-link ${ currentPath === normalize(link.href) ? 'active' : '' }`} >
                         {link.name}
-                    </a> // <a href={link.href} class="nav-link">{link.name}</a>
+                    </a>
                 ))
             }
             <a href={toggleLanguage} class='nav-link language-toggle'>
