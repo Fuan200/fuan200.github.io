@@ -223,47 +223,33 @@
     ],
 
     "projects": [
-        {
-            "name": "API Rest to Neo4J",
+        {            
+            "name": "Money Manager",
             "isActive": true,
-            "description": "Implementation of a RestAPI built with FastAPI using Neo4j as the database",
-            "highlights": ["Python", "FastAPI", "API", "Neo4j"],
-            "url": "https://github.com/JuanDiazuwu/db_neo4j_project"
+            "description": "Money Manager is a complete, self-hosting web application for managing personal finances.",
+            "highlights": ["Python", "FastAPI", "Preact", "Astro"],
+            "url": "https://github.com/Fuan200/money_manager"
         },
         {
-            "name": "Blog API",
+            "name": "Programming Club Website",
             "isActive": true,
-            "description": "Implementation of a RestAPI built with FastAPI for a blog",
-            "highlights": ["Python", "FastAPI", "API", "mongodb"],
-            "url": "https://github.com/JuanDiazuwu/blog_api"
+            "description": "Official website of the UACH Programming Club, built to share events, projects, and community updates.",
+            "highlights": ["hugo", "js", "html", "css"],
+            "url": "https://club-de-programacion-uach.github.io/"
         },
         {
-            "name": "VR UACH LAB",
+            "name": "Dispensing Machine",
             "isActive": false,
-            "description": "Website of the virtual reality laboratory at the Universidad Autónoma de Chihuahua",
-            "highlights": ["Angular", "TypeScript", "VR/AR"],
-            "url": "https://vr-uach-lab.web.app/"
+            "description": "Flutter app for a dispensing machine. A simple implementation of usb_serial.",
+            "highlights": ["Flutter", "Arduino", "Android"],
+            "url": "https://github.com/Fuan200/dispensing_machine"
         },
         {
-            "name": "Bong Simulation",
-            "isActive": false,
-            "description": "Pong game in Python using the Pygame library",
-            "highlights": ["Python", "Pygame", "threading | multiprocessing"],
-            "url": "https://github.com/Fuan200/bong_simulation"
-        },
-        {
-            "name": "Simple web site Python",
-            "isActive": false,
-            "description": "Minimalist implementation of a website using the Flask framework",
-            "highlights": ["Python", "Flask", "Web Development"],
-            "url": "https://github.com/Fuan200/website_python_flask"
-        },
-        {
-            "name": "Weather app Python",
-            "isActive": false,
-            "description": "Weather app built with Python and the tkinter library",
-            "highlights": ["Python", "Tkinter", "Weather"],
-            "url": "https://github.com/Fuan200/weather_app"
+            "name": "Github Fetch",
+            "isActive": true,
+            "description": "A Neofetch-like CLI tool that beautifully displays GitHub profile information in your Kitty Terminal.",
+            "highlights": ["Rust", "Kitty", "Fetching"],
+            "url": "https://github.com/Fuan200/githubfetch"
         }
     ],
     "setup": {
