@@ -117,83 +117,128 @@
     "skills": [
         {
             "name": "Python",
-            "level": "Avanzado",
-            "keywords": ["Desarrollo Web", "Scripting", "Programming"]
+            "level": "Advanced",
+            "keywords": ["Web Development", "Scripting", "Programming"]
         },
         {
             "name": "Bash",
-            "level": "Medio",
+            "level": "Intermediate",
             "keywords": ["Scripting", "Programming", "Linux"]
         },
         {
-            "name": "HTML",
-            "level": "Medio",
-            "keywords": ["Desarrollo Web", "Frontend"]
-        },
-        {
-            "name": "CSS",
-            "level": "Básico",
-            "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
-        },
-        {
             "name": "JavaScript",
-            "level": "Medio",
-            "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+            "level": "Intermediate",
+            "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
         },
         {
             "name": "TypeScript",
-            "level": "Básico",
-            "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+            "level": "Basic",
+            "keywords": ["Web Development", "Frontend", "Backend", "JavaScript Superset"]
+        },
+        {
+            "name": "HTML",
+            "level": "Intermediate",
+            "keywords": ["Web Development", "Frontend"]
+        },
+        {
+            "name": "CSS",
+            "level": "Basic",
+            "keywords": ["Web Development", "Frontend", "Responsive Design"]
         },
         {
             "name": "Angular",
-            "level": "Básico",
-            "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+            "level": "Basic",
+            "keywords": ["Web Development", "Frontend", "JavaScript Framework"]
+        },
+        {
+            "name": "Astro",
+            "level": "Basic",
+            "keywords": ["Web Development", "Frontend", "Static Sites"]
+        },
+        {
+            "name": "React",
+            "level": "Basic",
+            "keywords": ["Web Development", "Frontend", "Components"]
         },
         {
             "name": "Node",
-            "level": "Avanzado",
-            "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+            "level": "Advanced",
+            "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
         },
         {
             "name": "Express",
-            "level": "Medio",
+            "level": "Intermediate",
             "keywords": ["Backend", "JS"]
         },
         {
             "name": "NestJS",
-            "level": "Básico",
+            "level": "Basic",
             "keywords": ["Backend"]
         },
         {
+            "name": "FastAPI",
+            "level": "Basic",
+            "keywords": ["Backend", "Python"]
+        },
+        {
             "name": "MySQL",
-            "level": "Medio",
-            "keywords": ["Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"]
+            "level": "Intermediate",
+            "keywords": ["Databases", "SQL", "Data Storage", "Backend"]
+        },
+        {
+            "name": "Postgres",
+            "level": "Intermediate",
+            "keywords": ["Databases", "SQL", "Backend"]
         },
         {
             "name": "MongoDB",
-            "level": "Medio",
-            "keywords": ["Bases de Datos", "NoSQL", "Almacenamiento de Datos", "Backend"]
+            "level": "Intermediate",
+            "keywords": ["Databases", "NoSQL", "Data Storage", "Backend"]
+        },
+        {
+            "name": "Azure",
+            "level": "Intermediate",
+            "keywords": ["Cloud", "Deploy"]
+        },
+        {
+            "name": "Cloudflare",
+            "level": "Intermediate",
+            "keywords": ["Cloud", "Deploy", "CDN"]
+        },
+        {
+            "name": "Firebase",
+            "level": "Intermediate",
+            "keywords": ["Backend", "Cloud", "BaaS"]
         },
         {
             "name": "Docker",
-            "level": "Medio",
-            "keywords": ["Contenedores"]
+            "level": "Intermediate",
+            "keywords": ["Containers"]
         },
         {
             "name": "Git",
-            "level": "Avanzado",
-            "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+            "level": "Advanced",
+            "keywords": ["Version Control", "Collaboration", "Source Code"]
         },
         {
             "name": "GitHub",
-            "level": "Medio",
-            "keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"]
+            "level": "Intermediate",
+            "keywords": ["Version Control", "Collaboration", "Source Code", "Git"]
         },
         {
             "name": "Linux",
-            "level": "Alto",
-            "keywords": ["Sistemas Operativos", "Unix"]
+            "level": "High",
+            "keywords": ["Operating Systems", "Unix"]
+        },
+        {
+            "name": "Debian",
+            "level": "Intermediate",
+            "keywords": ["Operating Systems", "Linux"]
+        },
+        {
+            "name": "Ubuntu",
+            "level": "Intermediate",
+            "keywords": ["Operating Systems", "Linux"]
         }
     ],
 

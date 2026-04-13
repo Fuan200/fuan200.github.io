@@ -126,16 +126,6 @@
             "keywords": ["Scripting", "Programming", "Linux"]
         },
         {
-            "name": "HTML",
-            "level": "Medio",
-            "keywords": ["Desarrollo Web", "Frontend"]
-        },
-        {
-            "name": "CSS",
-            "level": "Básico",
-            "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
-        },
-        {
             "name": "JavaScript",
             "level": "Medio",
             "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
@@ -146,9 +136,29 @@
             "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
         },
         {
+            "name": "HTML",
+            "level": "Medio",
+            "keywords": ["Desarrollo Web", "Frontend"]
+        },
+        {
+            "name": "CSS",
+            "level": "Básico",
+            "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+        },
+        {
             "name": "Angular",
             "level": "Básico",
             "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+        },
+        {
+            "name": "Astro",
+            "level": "Básico",
+            "keywords": ["Desarrollo Web", "Frontend", "Backend", "Static Sites"]
+        },
+        {
+            "name": "React",
+            "level": "Básico",
+            "keywords": ["Desarrollo Web", "Frontend", "Componentes"]
         },
         {
             "name": "Node",
@@ -166,14 +176,39 @@
             "keywords": ["Backend"]
         },
         {
+            "name": "FastAPI",
+            "level": "Básico",
+            "keywords": ["Backend", "Python"]
+        },
+        {
             "name": "MySQL",
             "level": "Medio",
             "keywords": ["Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"]
         },
         {
+            "name": "Postgres",
+            "level": "Medio",
+            "keywords": ["Bases de Datos", "SQL", "Backend"]
+        },
+        {
             "name": "MongoDB",
             "level": "Medio",
             "keywords": ["Bases de Datos", "NoSQL", "Almacenamiento de Datos", "Backend"]
+        },
+        {
+            "name": "Azure",
+            "level": "Medio",
+            "keywords": ["Cloud", "Deploy"]
+        },
+        {
+            "name": "Cloudflare",
+            "level": "Medio",
+            "keywords": ["Cloud", "Deploy", "CDN"]
+        },
+        {
+            "name": "Firebase",
+            "level": "Medio",
+            "keywords": ["Backend", "Cloud", "BaaS"]
         },
         {
             "name": "Docker",
@@ -194,6 +229,16 @@
             "name": "Linux",
             "level": "Alto",
             "keywords": ["Sistemas Operativos", "Unix"]
+        },
+        {
+            "name": "Debian",
+            "level": "Medio",
+            "keywords": ["Sistemas Operativos", "Linux"]
+        },
+        {
+            "name": "Ubuntu",
+            "level": "Medio",
+            "keywords": ["Sistemas Operativos", "Linux"]
         }
     ],
 
