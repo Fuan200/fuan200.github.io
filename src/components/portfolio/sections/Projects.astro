@@ -5,37 +5,75 @@ interface Props {
         isActive: boolean;
         description: string;
         highlights: string[];
+        image: string;
+        github?: string;
         url: string;
     }[];
 }
 
 import Section from '@/components/Section.astro';
+import GitHub from '@/icons/GitHub.astro';
+import Arrow from '@/icons/Arrow.astro';
 
 const { currentLocale } = Astro;
 const { projects } = Astro.props;
 const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
+const githubLabel = currentLocale === 'en' ? 'GitHub repository' : 'Repositorio en GitHub';
+const viewProjectLabel = currentLocale === 'en' ? 'Open project' : 'Abrir proyecto';
+const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista previa del proyecto';
 ---
 
-<Section title={title}>
+<Section title={title} maxWidth='900px'>
+    <br>
     <div class='projects-container'>
         {
-            projects.map(({ url, description, highlights, name, isActive }) => {
+            projects.map(({ url, description, highlights, name, image, github }) => {
+                const primaryHref = url !== github ? url : github ?? url;
+                const showPreview = Boolean(url && url !== github);
+
                 return (
                     <article class='project-card'>
-                        <header>
-                            <h3>
-                                <a href={url} target='_blank' title={`Ver el proyecto ${name}`}>
-                                    {name}
-                                </a>
-                                {isActive && <span class='active-indicator'>&bull;</span>}
-                            </h3>
-                            <p class='project-description'>{description}</p>
-                        </header>
-                        <footer class='project-tags'>
-                            {highlights.map((highlight) => (
-                                <span class='tag'>{highlight}</span>
-                            ))}
-                        </footer>
+                        <div class='project-media'>
+                            <a class='project-image-frame' href={primaryHref} target='_blank' rel='noopener noreferrer' title={`${viewProjectLabel} ${name}`}>
+                                <img src={image} alt={`${projectAltLabel} ${name}`} loading='lazy' />
+                            </a>
+                        </div>
+
+                        <div class='project-content'>
+                            <header class='project-header'>
+                                <h3>
+                                    <a href={primaryHref} target='_blank' rel='noopener noreferrer' title={`${viewProjectLabel} ${name}`}>
+                                        {name}
+                                    </a>
+                                </h3>
+
+                                <div class='project-tags'>
+                                    {highlights.map((highlight) => (
+                                        <span class='tag'>{highlight}</span>
+                                    ))}
+                                </div>
+
+                                <p class='project-description'>{description}</p>
+                            </header>
+
+                            <footer class='project-actions'>
+                                {
+                                    github && (
+                                        <a class='project-code-link' href={github} target='_blank' rel='noopener noreferrer' aria-label={githubLabel} title={githubLabel}>
+                                            <GitHub />
+                                        </a>
+                                    )
+                                }
+
+                                {
+                                    showPreview && (
+                                        <a class='project-preview-link' href={url} target='_blank' rel='noopener noreferrer' aria-label={viewProjectLabel} title={viewProjectLabel}>
+                                            <Arrow />
+                                        </a>
+                                    )
+                                }
+                            </footer>
+                        </div>
                     </article>
                 );
             })
@@ -45,76 +83,193 @@ const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
 
 <style>
     .projects-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
         width: 100%;
     }
 
     .project-card {
-        border-radius: 8px;
-        border: 1px solid #202020;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .project-media {
+        min-width: 0;
+    }
+
+    .project-image-frame {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        aspect-ratio: 16 / 8;
+        width: 100%;
+        height: 100%;
+        /* max-width: 92%; */
+        box-sizing: border-box;
+        border-radius: 20px;
+        border: 1px solid rgba(187, 134, 252, 0.16);
+        /* background:
+            radial-gradient(circle at top center, rgba(83, 52, 131, 0.38), transparent 48%),
+            linear-gradient(180deg, #171b2a 0%, #0f1118 100%); */
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+        transition:
+            border-color 0.28s ease,
+            box-shadow 0.28s ease,
+            background-color 0.28s ease;
+    }
+
+    .project-image-frame::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.28s ease;
+        box-shadow:
+            inset 0 0 0 1px rgba(187, 134, 252, 0.18),
+            inset 0 0 24px rgba(187, 134, 252, 0.14);
+    }
+
+    .project-media:hover  .project-image-frame {
+        border-color: rgba(187, 134, 252, 0.42);
+        background: rgba(40, 40, 40, 0.35);
+        box-shadow:
+            0 24px 56px rgba(0, 0, 0, 0.42),
+            0 0 0 1px rgba(187, 134, 252, 0.12),
+            0 0 28px rgba(187, 134, 252, 0.16);
+    }
+
+    .project-media:hover .project-image-frame::before {
+        opacity: 2;
+    }
+
+    .project-image-frame img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: top;
+        transition: transform 0.28s ease;
+    }
+
+    .project-media:hover .project-image-frame img {
+        transform: scale(1.1);
+    }
+
+    .project-content {
         display: flex;
         flex-direction: column;
-        padding: 1.5rem;
-        background: #292929;
-        color: #fdfdfd;
-        transition: all 0.2s ease-in-out;
-        height: 100%;
+        justify-content: center;
+        gap: 1.25rem;
+        min-width: 0;
     }
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        border-color: #333;
-    }
-
-    .project-card header {
-        margin-bottom: 1rem;
+    .project-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
     }
 
     .project-card h3 {
-        margin: 0 0 0.5rem 0;
-        font-size: 1.2rem;
+        margin: 0;
+        /* font-size: 2rem; */
+        line-height: 1.2;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
-    .project-card a {
+    .project-card h3 a {
         color: #fdfdfd;
         text-decoration: none;
     }
 
-    .project-card a:hover {
+    .project-card h3 a:hover {
         text-decoration: underline;
     }
 
     .project-description {
-        font-size: 0.9rem;
-        line-height: 1.4;
-        color: #ccc;
         margin: 0;
+        color: #b6bac8;
+        /* font-size: 1rem; */
+        line-height: 1.6;z
     }
 
     .active-indicator {
         color: rgb(0, 188, 47);
         animation: flicker 3s ease-in infinite;
-        margin-left: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .project-tags {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-        margin-top: auto;
     }
 
     .tag {
-        border-radius: 6px;
-        background: #555;
-        color: #fdfdfd;
-        font-size: 0.7rem;
-        font-weight: 500;
-        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(18, 84, 112, 0.4);
+        border: 1px solid rgba(0, 196, 204, 0.26);
+        color: #f0fdff;
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 0.38rem 0.82rem;
         white-space: nowrap;
+    }
+
+    .project-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .project-code-link {
+        display: inline-flex;
+        align-items: center;
+        color: #d6dae5;
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .project-code-link:hover {
+        color: #ffffff;
+        transform: translateX(2px);
+    }
+
+    .project-code-link :global(svg) {
+        width: 25px;
+        height: 25px;
+        flex: 0 0 auto;
+    }
+
+    .project-preview-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        color: #f5f7ff;
+        text-decoration: none;
+        transition: transform 0.2s ease, color 0.2s ease;
+        line-height: 1;
+    }
+
+    .project-preview-link :global(svg) {
+        width: 25px;
+        height: 25px;
+        flex: 0 0 auto;
+    }
+
+    .project-preview-link:hover {
+        transform: translateX(2px);
+        color: #ffffff;
     }
 
     @keyframes flicker {
@@ -127,28 +282,34 @@ const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
         }
     }
 
-    /* Mobile styles */
     @media (max-width: 768px) {
-        .projects-container {
+        .project-card {
             grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .project-image-frame {
+            max-width: 100%;
+        }
+
+        .project-card h3 {
+            font-size: 1.45rem;
+        }
+
+        .project-content {
             gap: 1rem;
         }
 
-        .project-card {
-            padding: 1.25rem;
-            border: none;
-            border-bottom: 1px solid #333;
-            border-radius: 0;
-        }
-
-        .project-card:hover {
-            transform: none;
-            box-shadow: none;
+        .project-actions {
+            gap: 0.75rem;
         }
     }
 
-    /* Small mobile devices */
     @media (max-width: 480px) {
+        .projects-container {
+            gap: 2.5rem;
+        }
+
         .project-description {
             font-size: 0.85rem;
         }
@@ -156,6 +317,11 @@ const title = currentLocale === 'en' ? 'Projects' : 'Proyectos';
         .tag {
             font-size: 0.65rem;
             padding: 0.25rem 0.6rem;
+        }
+
+        .project-preview-link {
+            width: 100%;
+            justify-content: flex-start;
         }
     }
 

@@ -273,6 +273,8 @@
             "isActive": true,
             "description": "Money Manager es una aplicación web full stack auto hosteada para el manejo de finanzas personales.",
             "highlights": ["Python", "FastAPI", "Preact", "Astro"],
+            "image": "/projects/money-manager.png",
+            "github": "https://github.com/Fuan200/money_manager",
             "url": "https://github.com/Fuan200/money_manager"
         },
         {
@@ -280,6 +282,7 @@
             "isActive": true,
             "description": "El sitio web oficial del Club de Programación de la UACH, donde se comparten eventos, recursos y proyectos.",
             "highlights": ["hugo", "js", "html", "css"],
+            "image": "/projects/club.png",
             "url": "https://club-de-programacion-uach.github.io/"
         },
         {
@@ -287,6 +290,8 @@
             "isActive": false,
             "description": "Aplicación de Flutter para el manejo de una maquina dispensadora. Implementando usb_serial",
             "highlights": ["Flutter", "Arduino", "Android"],
+            "image": "/projects/dispensing-machine.jpg",
+            "github": "https://github.com/Fuan200/dispensing_machine",
             "url": "https://github.com/Fuan200/dispensing_machine"
         },
         {
@@ -294,6 +299,8 @@
             "isActive": true,
             "description": "Un CLI que muestra de manera bonita la información de tu perfil de Github en tu terminal de Kitty",
             "highlights": ["Rust", "Kitty", "Fetching"],
+            "image": "/projects/githubfetch.jpg",
+            "github": "https://github.com/Fuan200/githubfetch",
             "url": "https://github.com/Fuan200/githubfetch"
         }
     ],

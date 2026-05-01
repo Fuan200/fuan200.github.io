@@ -63,7 +63,7 @@ const visibleSkills = skills.filter(({ name }) => name in SKILLS_ICONS);
 const carouselSkills = [...visibleSkills, ...visibleSkills];
 ---
 
-<Section title={title}>
+<Section title={title} maxWidth='900px'>
     <div class='skills-carousel' aria-label={title}>
         <ul class='skills-track'>
             {

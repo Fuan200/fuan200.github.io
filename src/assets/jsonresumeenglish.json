@@ -273,6 +273,8 @@
             "isActive": true,
             "description": "Money Manager is a complete, self-hosting web application for managing personal finances.",
             "highlights": ["Python", "FastAPI", "Preact", "Astro"],
+            "image": "/projects/money-manager.png",
+            "github": "https://github.com/Fuan200/money_manager",
             "url": "https://github.com/Fuan200/money_manager"
         },
         {
@@ -280,6 +282,7 @@
             "isActive": true,
             "description": "Official website of the UACH Programming Club, built to share events, projects, and community updates.",
             "highlights": ["hugo", "js", "html", "css"],
+            "image": "/projects/club.png",
             "url": "https://club-de-programacion-uach.github.io/"
         },
         {
@@ -287,6 +290,8 @@
             "isActive": false,
             "description": "Flutter app for a dispensing machine. A simple implementation of usb_serial.",
             "highlights": ["Flutter", "Arduino", "Android"],
+            "image": "/projects/dispensing-machine.jpg",
+            "github": "https://github.com/Fuan200/dispensing_machine",
             "url": "https://github.com/Fuan200/dispensing_machine"
         },
         {
@@ -294,6 +299,8 @@
             "isActive": true,
             "description": "A Neofetch-like CLI tool that beautifully displays GitHub profile information in your Kitty Terminal.",
             "highlights": ["Rust", "Kitty", "Fetching"],
+            "image": "/projects/githubfetch.jpg",
+            "github": "https://github.com/Fuan200/githubfetch",
             "url": "https://github.com/Fuan200/githubfetch"
         }
     ],
