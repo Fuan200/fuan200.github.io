@@ -110,7 +110,7 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
         /* max-width: 92%; */
         box-sizing: border-box;
         border-radius: 20px;
-        border: 1px solid rgba(187, 134, 252, 0.16);
+        border: 1px solid rgba(0, 196, 204, 0.32);
         /* background:
             radial-gradient(circle at top center, rgba(83, 52, 131, 0.38), transparent 48%),
             linear-gradient(180deg, #171b2a 0%, #0f1118 100%); */
@@ -121,26 +121,23 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
             background-color 0.28s ease;
     }
 
-    .project-image-frame::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.28s ease;
-        box-shadow:
-            inset 0 0 0 1px rgba(187, 134, 252, 0.18),
-            inset 0 0 24px rgba(187, 134, 252, 0.14);
-    }
-
-    .project-media:hover  .project-image-frame {
-        border-color: rgba(187, 134, 252, 0.42);
-        background: rgba(40, 40, 40, 0.35);
+    .project-media:hover .project-image-frame {
+        border-color: #00aeb5;
+        border-width: 1px;
         box-shadow:
             0 24px 56px rgba(0, 0, 0, 0.42),
-            0 0 0 1px rgba(187, 134, 252, 0.12),
-            0 0 28px rgba(187, 134, 252, 0.16);
+            0 0 0 1px rgba(0, 196, 204, 0.32),
+            0 0 24px rgba(0, 196, 204, 0.30),
+            0 0 56px rgba(0, 196, 204, 0.28),
+            0 0 88px rgba(0, 196, 204, 0.18);
+    }
+
+    .project-media:hover .project-image-frame::before {
+        opacity: 1;
+        box-shadow:
+            inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+            inset 0 0 22px rgba(0, 196, 204, 0.24),
+            inset 0 0 44px rgba(0, 196, 204, 0.16);
     }
 
     .project-media:hover .project-image-frame::before {
