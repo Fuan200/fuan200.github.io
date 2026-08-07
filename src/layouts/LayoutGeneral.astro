@@ -39,6 +39,8 @@ const { title } = Astro.props;
 <style is:global>
     :root {
         view-transition-name: root;
+        --color-primary: #00c4cc; /* celeste */
+        --color-background: #121212;
     }
 
     html {
@@ -77,6 +79,11 @@ const { title } = Astro.props;
         list-style: none;
         margin: 0;
         padding: 0;
+    }
+
+    ::selection {
+        background: var(--color-primary);
+        color: var(--color-background);
     }
 
     *,

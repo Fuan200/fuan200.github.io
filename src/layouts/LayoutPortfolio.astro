@@ -41,6 +41,8 @@ const { label, url } = basics;
 <style is:global>
     :root {
         view-transition-name: root;
+        --color-primary: #00c4cc; /* celeste */
+        --color-background: #121212;
     }
 
     html {
@@ -85,6 +87,11 @@ const { label, url } = basics;
     *::before,
     *::after {
         box-sizing: border-box;
+    }
+
+    ::selection {
+        background: var(--color-primary);
+        color: var(--color-background);
     }
 
     h1,
