@@ -1,7 +1,7 @@
 ---
 interface Props {
     posts: Array<{
-        slug: string;
+        id: string;
         data: {
             title: string;
             description?: string;
@@ -49,7 +49,7 @@ const defaultIntro = locale === 'es' ? 'Notas, experimentos y write-ups de traba
                         ) : null}
                     </div>
                     <h2>
-                        <a class='post-title-link' href={`${basePath}/${post.slug.split('/')[0]}`}>
+                        <a class='post-title-link' href={`${basePath}/${post.id.split('/')[0]}`}>
                             {post.data.title}
                         </a>
                     </h2>
