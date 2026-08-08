@@ -58,7 +58,7 @@ const links = [
         <nav class='nav-menu'>
             {
                 links.map((link) => (
-                    <a href={link.href} class={`nav-link ${ currentPath === normalize(link.href) ? 'active' : '' }`} >
+                    <a href={link.href} class={`nav-link ${currentPath === normalize(link.href) ? 'active' : ''}`}>
                         {link.name}
                     </a>
                 ))

@@ -24,17 +24,23 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
 ---
 
 <Section title={title} maxWidth='900px'>
-    <br>
+    <br />
     <div class='projects-container'>
         {
             projects.map(({ url, description, highlights, name, image, github }) => {
-                const primaryHref = url !== github ? url : github ?? url;
+                const primaryHref = url !== github ? url : (github ?? url);
                 const showPreview = Boolean(url && url !== github);
 
                 return (
                     <article class='project-card'>
                         <div class='project-media'>
-                            <a class='project-image-frame' href={primaryHref} target='_blank' rel='noopener noreferrer' title={`${viewProjectLabel} ${name}`}>
+                            <a
+                                class='project-image-frame'
+                                href={primaryHref}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                title={`${viewProjectLabel} ${name}`}
+                            >
                                 <img src={image} alt={`${projectAltLabel} ${name}`} loading='lazy' />
                             </a>
                         </div>
@@ -57,21 +63,31 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
                             </header>
 
                             <footer class='project-actions'>
-                                {
-                                    github && (
-                                        <a class='project-code-link' href={github} target='_blank' rel='noopener noreferrer' aria-label={githubLabel} title={githubLabel}>
-                                            <GitHub />
-                                        </a>
-                                    )
-                                }
+                                {github && (
+                                    <a
+                                        class='project-code-link'
+                                        href={github}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        aria-label={githubLabel}
+                                        title={githubLabel}
+                                    >
+                                        <GitHub />
+                                    </a>
+                                )}
 
-                                {
-                                    showPreview && (
-                                        <a class='project-preview-link' href={url} target='_blank' rel='noopener noreferrer' aria-label={viewProjectLabel} title={viewProjectLabel}>
-                                            <Arrow />
-                                        </a>
-                                    )
-                                }
+                                {showPreview && (
+                                    <a
+                                        class='project-preview-link'
+                                        href={url}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        aria-label={viewProjectLabel}
+                                        title={viewProjectLabel}
+                                    >
+                                        <Arrow />
+                                    </a>
+                                )}
                             </footer>
                         </div>
                     </article>
@@ -127,7 +143,7 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
         box-shadow:
             0 24px 56px rgba(0, 0, 0, 0.42),
             0 0 0 1px rgba(0, 196, 204, 0.32),
-            0 0 24px rgba(0, 196, 204, 0.30),
+            0 0 24px rgba(0, 196, 204, 0.3),
             0 0 56px rgba(0, 196, 204, 0.28),
             0 0 88px rgba(0, 196, 204, 0.18);
     }
@@ -194,7 +210,7 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
         margin: 0;
         color: #b6bac8;
         /* font-size: 1rem; */
-        line-height: 1.6;z
+        line-height: 1.6;
     }
 
     .active-indicator {
@@ -233,7 +249,9 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
         align-items: center;
         color: #d6dae5;
         text-decoration: none;
-        transition: color 0.2s ease, transform 0.2s ease;
+        transition:
+            color 0.2s ease,
+            transform 0.2s ease;
     }
 
     .project-code-link:hover {
@@ -254,7 +272,9 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
         width: fit-content;
         color: #f5f7ff;
         text-decoration: none;
-        transition: transform 0.2s ease, color 0.2s ease;
+        transition:
+            transform 0.2s ease,
+            color 0.2s ease;
         line-height: 1;
     }
 

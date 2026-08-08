@@ -268,7 +268,7 @@
     ],
 
     "projects": [
-        {            
+        {
             "name": "Money Manager",
             "isActive": true,
             "description": "Money Manager es una aplicación web full stack auto hosteada para el manejo de finanzas personales.",

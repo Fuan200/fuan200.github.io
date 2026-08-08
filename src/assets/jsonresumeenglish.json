@@ -268,7 +268,7 @@
     ],
 
     "projects": [
-        {            
+        {
             "name": "Money Manager",
             "isActive": true,
             "description": "Money Manager is a complete, self-hosting web application for managing personal finances.",
