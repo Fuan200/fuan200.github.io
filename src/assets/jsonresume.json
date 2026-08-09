@@ -33,21 +33,21 @@
 
     "work": [
         {
-            "name": "Veintticinco",
-            "position": "Desarrollador FullStack",
-            "url": "",
-            "startDate": "2025-06-01",
-            "endDate": null,
-            "summary": "Ingeniero de software con experiencia en el desarrollo de aplicaciones web full-stack, y administración de sistemas Linux, hardening de servidores (restricción de puertos, Fail2Ban, auditación del sistema operativo) y uso de contenedores.",
-            "highlights": [""]
-        },
-        {
-            "name": "Sphere Tec",
+            "name": "Freelancer",
             "position": "Desarrollador FullStack",
             "url": "",
             "startDate": "2024-08-01",
             "endDate": null,
             "summary": "Desarrollador web especializado en Angular y NestJS, con experiencia en el diseño e implementación de aplicaciones frontend y backend. Manejo de Azure y Firebase para despliegue y administración de servicios en la nube, además de gestión y configuración de servidores Linux.",
+            "highlights": [""]
+        },
+        {
+            "name": "Veintticinco",
+            "position": "Desarrollador FullStack",
+            "url": "",
+            "startDate": "2025-07-01",
+            "endDate": "2026-04-01",
+            "summary": "Ingeniero de software con experiencia en el desarrollo de aplicaciones web full-stack, y administración de sistemas Linux, hardening de servidores (restricción de puertos, Fail2Ban, auditación del sistema operativo) y uso de contenedores.",
             "highlights": [""]
         },
         {
