@@ -112,6 +112,10 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
         align-items: center;
     }
 
+    .project-card:nth-child(even) .project-media {
+        order: 2;
+    }
+
     .project-media {
         min-width: 0;
     }
@@ -227,13 +231,19 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
     }
 
     .tag {
-        border-radius: 999px;
-        background: rgba(18, 84, 112, 0.4);
-        border: 1px solid rgba(0, 196, 204, 0.26);
-        color: #f0fdff;
-        font-size: 0.72rem;
+        border-radius: 0.2rem;
+        background: rgba(0, 196, 204, 0.1);
+        border-left: 2px solid #00c4cc;
+        color: #d9ffff;
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            'Courier New',
+            monospace;
+        font-size: 0.68rem;
         font-weight: 600;
-        padding: 0.38rem 0.82rem;
+        padding: 0.35rem 0.55rem;
         white-space: nowrap;
     }
 
@@ -303,6 +313,10 @@ const projectAltLabel = currentLocale === 'en' ? 'Preview of project' : 'Vista p
         .project-card {
             grid-template-columns: 1fr;
             gap: 1.5rem;
+        }
+
+        .project-card:nth-child(even) .project-media {
+            order: initial;
         }
 
         .project-image-frame {
