@@ -10,12 +10,15 @@
     "preview": "astro preview --host 0.0.0.0",
     "astro": "astro",
     "prettier": "prettier --write ./src",
-    "prettier:check": "prettier --check ./src"
+    "prettier:check": "prettier --check ./src",
+    "oxlint": "oxlint",
+    "oxlint:fix": "oxlint --fix"
   },
   "dependencies": {
     "astro": "^7.3.5"
   },
   "devDependencies": {
+    "oxlint": "^1.87.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1"
   }
