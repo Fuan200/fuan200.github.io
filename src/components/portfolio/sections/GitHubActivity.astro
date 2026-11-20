@@ -18,7 +18,13 @@ const title = isEnglish ? 'GitHub activity' : 'Actividad en GitHub';
 const caption = isEnglish ? 'Contributions in the past year' : 'Contribuciones durante el último año';
 let totalContributions: number | undefined;
 let contributions: Contribution[] = [];
-const colors = ['#202522', '#183d29', '#24633c', '#329950', '#52c878'];
+const colors = [
+    '#202426',
+    'color-mix(in srgb, var(--activity-color) 25%, #202426)',
+    'color-mix(in srgb, var(--activity-color) 50%, #202426)',
+    'color-mix(in srgb, var(--activity-color) 75%, #202426)',
+    'var(--activity-color)',
+];
 
 if (github) {
     try {
@@ -82,7 +88,18 @@ const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en' : 'es', { dateStyle:
                                                 width='11'
                                                 height='11'
                                                 rx='3.5'
+                                                fill='#202426'
+                                                aria-hidden='true'
+                                                pointer-events='none'
+                                            />
+                                            <rect
+                                                x={column * 14}
+                                                y={18 + row * 14}
+                                                width='11'
+                                                height='11'
+                                                rx='3.5'
                                                 fill={colors[day.level]}
+                                                style={`animation-delay: ${column * 25}ms`}
                                                 aria-label={contributionLabel}
                                                 data-contribution={contributionLabel}
                                                 tabindex='0'
@@ -223,6 +240,7 @@ const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en' : 'es', { dateStyle:
     }
 
     .activity-card {
+        --activity-color: var(--color-primary);
         margin: 1rem 0 0;
         padding: 1.25rem;
         border: 1px solid #282828;
@@ -248,6 +266,25 @@ const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en' : 'es', { dateStyle:
     .calendar text {
         fill: #aaa;
         font-size: 10px;
+    }
+
+    .calendar rect[data-contribution] {
+        animation: reveal-contribution 250ms ease both;
+    }
+
+    @keyframes reveal-contribution {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .calendar rect[data-contribution] {
+            animation: none;
+        }
     }
 
     figcaption {
