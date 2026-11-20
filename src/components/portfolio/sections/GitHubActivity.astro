@@ -77,7 +77,7 @@ const dateFormat = new Intl.DateTimeFormat(isEnglish ? 'en' : 'es', { dateStyle:
                                         : `${day.count} ${day.count === 1 ? 'contribución' : 'contribuciones'} el ${date}`;
                                     return (
                                         <>
-                                            {(index === 0 || day.date.endsWith('-01')) && (
+                                            {day.date.endsWith('-01') && (
                                                 <text x={column * 14} y='10'>
                                                     {monthFormat.format(new Date(`${day.date}T00:00:00Z`))}
                                                 </text>
