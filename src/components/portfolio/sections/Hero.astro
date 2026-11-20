@@ -127,12 +127,11 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(' &bull; ');
 
 <style>
     .hero-actions {
-        --action-border: rgba(255, 255, 255, 0.16);
-        --action-surface: rgba(255, 255, 255, 0.06);
+        --action-border: #333;
+        --action-surface: #222;
         --action-surface-hover: #009196;
         --action-text: #f3f4f6;
-        --action-muted: #c9d1d9;
-        --action-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+        --action-muted: #bbb;
         --action-highlight: #16c6c9;
     }
 
@@ -185,7 +184,8 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(' &bull; ');
         .hero-actions a.download-btn {
             order: 2;
             width: calc(100% - 32px);
-            margin-top: 1rem;
+            margin-inline-start: 0;
+            margin-top: 0.5rem;
             max-width: 17rem;
         }
     }
@@ -221,7 +221,8 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(' &bull; ');
     footer.no-print {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        align-items: center;
+        gap: 6px;
     }
 
     footer {
@@ -237,66 +238,50 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(' &bull; ');
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border: 2px solid var(--action-border);
+        border: 2px solid transparent;
         background: var(--action-surface);
-        box-shadow: var(--action-shadow);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
         text-decoration: none;
         transition:
             transform 0.22s ease,
             background-color 0.22s ease,
             border-color 0.22s ease,
-            color 0.22s ease,
-            box-shadow 0.22s ease;
+            color 0.22s ease;
     }
 
     .icon-link {
-        padding: 6px;
-        height: 42px;
-        width: 42px;
-        border-radius: 50%;
+        padding: 8px;
+        height: 44px;
+        width: 44px;
+        box-sizing: border-box;
+        border-radius: 14px;
+        flex-shrink: 0;
     }
 
-    .download-btn {
+    .hero-actions .download-btn {
         width: auto;
-        min-width: 148px;
-        min-height: 42px;
-        padding: 0.8rem 1.15rem;
+        min-height: 46px;
+        box-sizing: border-box;
+        margin-inline-start: 14px;
+        padding: 0.65rem 1rem;
         border-radius: 999px;
-        font-size: 0.92rem;
-        font-weight: 700;
+        font-size: 0.8125rem;
+        font-weight: 400;
         letter-spacing: 0.01em;
-        color: var(--action-text);
         text-align: center;
-        background: linear-gradient(135deg, rgba(22, 198, 201, 0.28), rgba(84, 110, 255, 0.28)), rgba(255, 255, 255, 0.08);
+        border-color: var(--action-border);
+        background: transparent;
     }
 
-    .hero-actions a svg {
-        width: 16px;
-        height: 16px;
-        transition:
-            transform 0.22s ease,
-            fill 0.22s ease;
+    .icon-link :global(svg) {
+        width: 22px;
+        height: 22px;
     }
 
     .hero-actions a:hover {
         color: var(--action-text);
-        border-color: rgba(255, 255, 255, 0.28);
+        border-color: var(--action-surface-hover);
         background: var(--action-surface-hover);
-        transform: translateY(-2px);
-        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
-    }
-
-    .hero-actions a:hover svg {
-        fill: #fdfdfd;
-        transform: scale(1.08);
-    }
-
-    .download-btn:hover {
-        background: #009196;
-        border-color: #009196;
-        color: white;
+        transform: translateY(-1px);
     }
 
     .hero-actions a:focus-visible {
@@ -306,8 +291,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(' &bull; ');
     }
 
     @media (prefers-reduced-motion: reduce) {
-        .hero-actions a,
-        .hero-actions a svg {
+        .hero-actions a {
             transition: none;
         }
     }
