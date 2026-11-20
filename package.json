@@ -15,10 +15,10 @@
     "oxlint:fix": "oxlint --fix"
   },
   "dependencies": {
-    "astro": "^7.4.8"
+    "astro": "^7.4.13"
   },
   "devDependencies": {
-    "oxlint": "^1.93.0",
+    "oxlint": "^1.94.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1"
   }
