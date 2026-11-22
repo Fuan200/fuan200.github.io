@@ -3,13 +3,13 @@
         "name": "Juan Antonio Díaz Fernández",
         "short_name": "Juan Díaz",
         "nickname": "Fuanito",
-        "label": "Desarrollador Backend",
+        "label": "Desarrollador Full Stack",
         "image": "/fuan200.png",
         "email": "juandiazfdez1992@gmail.com",
         "phone": "+52 6291099059",
-        "url": "https://fuan200.github.io/",
-        "cv": "/CV_ES.pdf",
-        "summary": "Desarrollador backend apasionado y estudiante comprometido en constante búsqueda de conocimiento. Con habilidades en el diseño e implementación de sistemas backend, con experiencia en lenguajes como Python y JavaScript, así como en el manejo de bases de datos relacionales y no relacionales.",
+        "url": "https://fuanito.me/",
+        "cv": "CV_.pdf",
+        "summary": "Desarrollador Full Stack con experiencia creando aplicaciones web y móviles, desde interfaces, validaciones y APIs REST hasta bases de datos y despliegues en servidores Linux con Docker. He trabajado en soluciones de transporte, gestión agrícola, nómina y geolocalización, utilizando Python, TypeScript, Angular, React, NestJS y FastAPI. Me interesa construir soluciones claras y mantenibles, contribuir al código abierto y experimentar con servicios autoalojados en mi homelab.",
         "location": {
             "address": "",
             "postalCode": "33980",
@@ -21,7 +21,7 @@
             {
                 "network": "LinkedIn",
                 "username": "Juan Díaz Fernández",
-                "url": "https://linkedin.com/in/juan-d%C3%ADaz-fern%C3%A1ndez-b388592ba/"
+                "url": "https://www.linkedin.com/in/juan-diaz-fernandez/"
             },
             {
                 "network": "GitHub",
@@ -34,30 +34,45 @@
     "work": [
         {
             "name": "Freelancer",
-            "position": "Desarrollador FullStack",
+            "position": "Desarrollador Full Stack",
             "url": "",
-            "startDate": "2024-08-01",
+            "startDate": "2024-10-01",
             "endDate": null,
-            "summary": "Desarrollador web especializado en Angular y NestJS, con experiencia en el diseño e implementación de aplicaciones frontend y backend. Manejo de Azure y Firebase para despliegue y administración de servicios en la nube, además de gestión y configuración de servidores Linux.",
-            "highlights": [""]
+            "summary": "Desarrollo de aplicaciones web y móviles para transporte, gestión agrícola, nómina y geolocalización, abarcando interfaces, APIs, bases de datos y despliegue. Implementación de CI/CD con GitHub Actions y registros de contenedores, además de administración de servicios Linux y automatización de respaldos.",
+            "highlights": [
+                "Desarrollé una aplicación de reserva de transporte local para iOS y Android, junto con su landing page y sitio de administración.",
+                "Desarrollé un sistema de gestión agrícola para facturas de compra y venta, inventario de semillas, historial de cultivos, cosechas, empaque y distribución.",
+                "Lideré el desarrollo de una aplicación de nómina con gestión de empleados, cálculo de salarios, deducciones, prestaciones y recibos.",
+                "Implementé CI/CD con GitHub Actions y registros de contenedores.",
+                "Construí una landing page con Astro para una plataforma de competencias caninas.",
+                "Desarrollé una aplicación de geolocalización con visualización de propiedades y puntos de interés según roles, y agrupamiento de datos delictivos mediante K-Means.",
+                "Administré servicios Linux como MeiliSearch y Matrix, y automaticé respaldos de bases de datos con Python, CRON y Docker."
+            ]
         },
         {
             "name": "Veintticinco",
-            "position": "Desarrollador FullStack",
+            "position": "Desarrollador Web y Administrador de Sistemas",
             "url": "",
             "startDate": "2025-07-01",
-            "endDate": "2026-04-01",
-            "summary": "Ingeniero de software con experiencia en el desarrollo de aplicaciones web full-stack, y administración de sistemas Linux, hardening de servidores (restricción de puertos, Fail2Ban, auditación del sistema operativo) y uso de contenedores.",
-            "highlights": [""]
+            "endDate": "2026-03-01",
+            "summary": "Desarrollo de una aplicación web de nómina con .NET, enfocada en usabilidad y UX/UI. Administración y hardening de servidores AlmaLinux, y construcción de un clúster Raspberry Pi para servicios en contenedores con redundancia y distribución de carga.",
+            "highlights": [
+                "Desarrollé una aplicación web de nómina con .NET aplicando prácticas de usabilidad y UX/UI.",
+                "Reforcé la seguridad de servidores AlmaLinux mediante restricción de puertos, Fail2Ban, autenticación SSH con claves, auditoría del sistema y monitoreo de procesos y recursos.",
+                "Construí un clúster Raspberry Pi para servicios en contenedores con redundancia y distribución de carga."
+            ]
         },
         {
             "name": "Leading Tech",
-            "position": "Programador Web & Tester",
+            "position": "Desarrollador Web y QA",
             "url": "",
-            "startDate": "2024-02-01",
-            "endDate": "2024-06-01",
-            "summary": "Programador web especializado en Angular y NestJS, con habilidades en desarrollo frontend y backend, además de tener el rol de tester utilizando Jest para pruebas unitarias y de integración.",
-            "highlights": [""]
+            "startDate": "2024-01-01",
+            "endDate": "2024-07-01",
+            "summary": "Desarrollo de funcionalidades frontend y backend con Angular y NestJS para un proyecto de soluciones relacionadas con poligrafía. Implementación de pruebas unitarias y de integración con Jest dentro de un equipo Scrum.",
+            "highlights": [
+                "Desarrollé funcionalidades frontend y backend con Angular y NestJS.",
+                "Implementé pruebas unitarias y de integración con Jest como parte de un equipo Scrum."
+            ]
         }
     ],
 
@@ -77,8 +92,8 @@
         {
             "institution": "Universidad Autónoma de Chihuahua",
             "url": "https://www.uach.mx",
-            "area": "Ingenieria en Ciencias de la Computación",
-            "studyType": "Estudiante egresado de Ingenieria en Ciencias de la Computación",
+            "area": "Ingeniería en Ciencias de la Computación",
+            "studyType": "Ingeniero en Ciencias de la Computación",
             "startDate": "2020-08-01",
             "endDate": "2024-11-30",
             "score": 9.36,
@@ -148,12 +163,12 @@
         {
             "name": "Angular",
             "level": "Básico",
-            "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+            "keywords": ["Desarrollo Web", "Frontend", "Framework JavaScript"]
         },
         {
             "name": "Astro",
             "level": "Básico",
-            "keywords": ["Desarrollo Web", "Frontend", "Backend", "Static Sites"]
+            "keywords": ["Desarrollo Web", "Frontend", "Sitios Estáticos"]
         },
         {
             "name": "React",
@@ -244,12 +259,12 @@
 
     "languages": [
         {
-            "language": "Spanish",
-            "fluency": "Native speaker"
+            "language": "Español",
+            "fluency": "Nativo"
         },
         {
-            "language": "English",
-            "fluency": "Advanced"
+            "language": "Inglés",
+            "fluency": "B2"
         }
     ],
 
@@ -271,7 +286,7 @@
         {
             "name": "Money Manager",
             "isActive": true,
-            "description": "Money Manager es una aplicación web full stack auto hosteada para el manejo de finanzas personales.",
+            "description": "Aplicación web Full Stack autoalojada para gestionar finanzas personales, con backend en Python y FastAPI, interfaz en Astro y Preact con TypeScript, y base de datos PostgreSQL.",
             "highlights": ["Python", "FastAPI", "Preact", "Astro"],
             "image": "/projects/money-manager.png",
             "github": "https://github.com/Fuan200/money_manager",
@@ -281,24 +296,24 @@
             "name": "Programming Club Website",
             "isActive": true,
             "description": "El sitio web oficial del Club de Programación de la UACH, donde se comparten eventos, recursos y proyectos.",
-            "highlights": ["hugo", "js", "html", "css"],
+            "highlights": ["Hugo", "JavaScript", "HTML", "CSS"],
             "image": "/projects/club.png",
             "url": "https://club-de-programacion-uach.github.io/"
         },
         {
             "name": "Dispensing Machine",
             "isActive": false,
-            "description": "Aplicación de Flutter para el manejo de una maquina dispensadora. Implementando usb_serial",
+            "description": "Aplicación Android desarrollada con Flutter para controlar una máquina dispensadora mediante comunicación USB serial e integración con Arduino.",
             "highlights": ["Flutter", "Arduino", "Android"],
             "image": "/projects/dispensing-machine.jpg",
             "github": "https://github.com/Fuan200/dispensing_machine",
             "url": "https://github.com/Fuan200/dispensing_machine"
         },
         {
-            "name": "Github Fetch",
+            "name": "GitHub Fetch",
             "isActive": true,
-            "description": "Un CLI que muestra de manera bonita la información de tu perfil de Github en tu terminal de Kitty",
-            "highlights": ["Rust", "Kitty", "Fetching"],
+            "description": "Herramienta de línea de comandos escrita en Rust que muestra información de perfiles de GitHub en la terminal Kitty, con una presentación inspirada en Neofetch.",
+            "highlights": ["Rust", "Kitty", "CLI"],
             "image": "/projects/githubfetch.jpg",
             "github": "https://github.com/Fuan200/githubfetch",
             "url": "https://github.com/Fuan200/githubfetch"

@@ -3,13 +3,13 @@
         "name": "Juan Antonio Díaz Fernández",
         "short_name": "Juan Díaz",
         "nickname": "Fuanito",
-        "label": "Backend Developer",
+        "label": "Full Stack Developer",
         "image": "/fuan200.png",
         "email": "juandiazfdez1992@gmail.com",
         "phone": "+52 6291099059",
-        "url": "https://fuan200.github.io/",
-        "cv": "/CV_EN.pdf",
-        "summary": "Passionate backend developer and committed student constantly seeking knowledge. With skills in the design and implementation of backend systems, experience in languages such as Python and JavaScript, as well as in handling relational and non-relational databases",
+        "url": "https://fuanito.me/",
+        "cv": "CV_.pdf",
+        "summary": "Full stack developer with experience building web and mobile applications, from interfaces, validation, and RESTful APIs to databases and deployment on Linux servers with Docker. My work includes transportation, agricultural management, payroll, and geolocation applications using Python, TypeScript, Angular, React, NestJS, and FastAPI. I value clear, maintainable solutions, contribute to open source, and experiment with self-hosted services in my homelab.",
         "location": {
             "address": "",
             "postalCode": "33980",
@@ -21,7 +21,7 @@
             {
                 "network": "LinkedIn",
                 "username": "Juan Díaz Fernández",
-                "url": "https://linkedin.com/in/juan-d%C3%ADaz-fern%C3%A1ndez-b388592ba/"
+                "url": "https://www.linkedin.com/in/juan-diaz-fernandez/"
             },
             {
                 "network": "GitHub",
@@ -34,30 +34,45 @@
     "work": [
         {
             "name": "Freelancer",
-            "position": "FullStack Developer",
+            "position": "Full Stack Developer",
             "url": "",
-            "startDate": "2024-08-01",
+            "startDate": "2024-10-01",
             "endDate": null,
-            "summary": "Web developer specialized in Angular and NestJS, with experience in designing and implementing frontend and backend applications. Skilled in using Azure and Firebase for deployment and cloud service management, as well as in managing and configuring Linux servers.",
-            "highlights": [""]
+            "summary": "Development of web and mobile applications for transportation, agricultural management, payroll, and geolocation, covering interfaces, APIs, databases, and deployment. Implemented CI/CD with GitHub Actions and container registries, administered Linux services, and automated backups.",
+            "highlights": [
+                "Developed a local transportation booking application for iOS and Android, along with its landing page and back-office website.",
+                "Developed an agricultural management application for purchase and sales invoices, seed inventory, crop history, harvests, packaging, and distribution.",
+                "Led development of a payroll application covering employee management, salary calculations, deductions, benefits, and payroll receipts.",
+                "Implemented CI/CD with GitHub Actions and container registries.",
+                "Built an Astro landing page for a canine competition platform.",
+                "Developed a geolocation application with role-based property and point-of-interest displays, and K-Means clustering for crime data.",
+                "Administered Linux services including MeiliSearch and Matrix, and automated database backups with Python, CRON, and Docker."
+            ]
         },
         {
             "name": "Veintticinco",
-            "position": "Full Stack Developer",
+            "position": "Web Developer & SysAdmin",
             "url": "",
             "startDate": "2025-07-01",
-            "endDate": "2026-04-01",
-            "summary": "Software engineer with experience in developing full-stack web applications, and skilled in Linux system administration, server hardening (port restriction, Fail2Ban, OS auditing), and containerized infrastructure.",
-            "highlights": [""]
+            "endDate": "2026-03-01",
+            "summary": "Developed a .NET payroll web application with a focus on usability and UX/UI. Administered and hardened AlmaLinux servers, and built a Raspberry Pi cluster for containerized services with redundancy and load distribution.",
+            "highlights": [
+                "Developed a .NET payroll web application using usability and UX/UI practices.",
+                "Hardened AlmaLinux servers through port restrictions, Fail2Ban, SSH-key authentication, OS auditing, and process and resource monitoring.",
+                "Built a Raspberry Pi cluster for containerized services with redundancy and load distribution."
+            ]
         },
         {
             "name": "Leading Tech",
-            "position": "Web Programmer & Tester",
+            "position": "Web Developer & QA",
             "url": "",
-            "startDate": "2024-02-01",
-            "endDate": "2024-06-01",
-            "summary": "Web developer specialized in Angular and NestJS, with skills in frontend and backend development, as well as having the role of tester using Jest for unit and integration tests.",
-            "highlights": [""]
+            "startDate": "2024-01-01",
+            "endDate": "2024-07-01",
+            "summary": "Developed frontend and backend features with Angular and NestJS for a polygraph-related solutions project. Implemented unit and integration tests with Jest as part of a Scrum development team.",
+            "highlights": [
+                "Developed frontend and backend features with Angular and NestJS.",
+                "Implemented unit and integration tests with Jest as part of a Scrum development team."
+            ]
         }
     ],
 
@@ -77,8 +92,8 @@
         {
             "institution": "Universidad Autónoma de Chihuahua",
             "url": "https://www.uach.mx",
-            "area": "Engineering in Computer Science",
-            "studyType": "Graduate student in Computer Science Engineering",
+            "area": "Computer Science Engineering",
+            "studyType": "Computer Science Engineer",
             "startDate": "2020-08-01",
             "endDate": "2024-11-30",
             "score": 9.36,
@@ -86,7 +101,7 @@
         }
     ],
 
-    "awards": [
+       "awards": [
         {
             "title": "Award",
             "date": "2014-11-01",
@@ -249,7 +264,7 @@
         },
         {
             "language": "English",
-            "fluency": "Advanced"
+            "fluency": "B2"
         }
     ],
 
@@ -271,7 +286,7 @@
         {
             "name": "Money Manager",
             "isActive": true,
-            "description": "Money Manager is a complete, self-hosting web application for managing personal finances.",
+            "description": "A self-hosted full stack personal finance application with a Python and FastAPI backend, an Astro and Preact interface using TypeScript, and a PostgreSQL database.",
             "highlights": ["Python", "FastAPI", "Preact", "Astro"],
             "image": "/projects/money-manager.png",
             "github": "https://github.com/Fuan200/money_manager",
@@ -281,24 +296,24 @@
             "name": "Programming Club Website",
             "isActive": true,
             "description": "Official website of the UACH Programming Club, built to share events, projects, and community updates.",
-            "highlights": ["hugo", "js", "html", "css"],
+            "highlights": ["Hugo", "JavaScript", "HTML", "CSS"],
             "image": "/projects/club.png",
             "url": "https://club-de-programacion-uach.github.io/"
         },
         {
             "name": "Dispensing Machine",
             "isActive": false,
-            "description": "Flutter app for a dispensing machine. A simple implementation of usb_serial.",
+            "description": "An Android application built with Flutter to control a dispensing machine through USB serial communication and Arduino integration.",
             "highlights": ["Flutter", "Arduino", "Android"],
             "image": "/projects/dispensing-machine.jpg",
             "github": "https://github.com/Fuan200/dispensing_machine",
             "url": "https://github.com/Fuan200/dispensing_machine"
         },
         {
-            "name": "Github Fetch",
+            "name": "GitHub Fetch",
             "isActive": true,
-            "description": "A Neofetch-like CLI tool that beautifully displays GitHub profile information in your Kitty Terminal.",
-            "highlights": ["Rust", "Kitty", "Fetching"],
+            "description": "A command-line tool written in Rust that displays GitHub profile information in the Kitty terminal, with a Neofetch-inspired presentation.",
+            "highlights": ["Rust", "Kitty", "CLI"],
             "image": "/projects/githubfetch.jpg",
             "github": "https://github.com/Fuan200/githubfetch",
             "url": "https://github.com/Fuan200/githubfetch"
