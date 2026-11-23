@@ -8,7 +8,7 @@
         "email": "juandiazfdez1992@gmail.com",
         "phone": "+52 6291099059",
         "url": "https://fuanito.me/",
-        "cv": "CV_.pdf",
+        "cv": "/CV_.pdf",
         "summary": "Full stack developer with experience building web and mobile applications, from interfaces, validation, and RESTful APIs to databases and deployment on Linux servers with Docker. My work includes transportation, agricultural management, payroll, and geolocation applications using Python, TypeScript, Angular, React, NestJS, and FastAPI. I value clear, maintainable solutions, contribute to open source, and experiment with self-hosted services in my homelab.",
         "location": {
             "address": "",
