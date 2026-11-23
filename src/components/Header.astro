@@ -70,6 +70,27 @@ const links = [
     </div>
 </header>
 
+<script>
+    import type { TransitionBeforeSwapEvent } from 'astro:transitions/client';
+
+    document.addEventListener('astro:before-swap', (event: TransitionBeforeSwapEvent) => {
+        if (!event.sourceElement?.closest('.language-toggle')) return;
+
+        const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollRange > 0 ? window.scrollY / scrollRange : 0;
+        const left = window.scrollX;
+
+        document.addEventListener(
+            'astro:after-swap',
+            () => {
+                const newScrollRange = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+                window.scrollTo({ left, top: progress * newScrollRange, behavior: 'instant' });
+            },
+            { once: true },
+        );
+    });
+</script>
+
 <style>
     .header {
         position: fixed;
