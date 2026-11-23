@@ -14,7 +14,7 @@ interface Contribution {
 const { profiles } = Astro.props;
 const github = profiles.find(({ network }) => network === 'GitHub');
 const isEnglish = Astro.currentLocale === 'en';
-const title = isEnglish ? 'GitHub activity' : 'Actividad en GitHub';
+const title = isEnglish ? 'GitHub Activity' : 'Actividad en GitHub';
 const caption = isEnglish ? 'Contributions in the past year' : 'Contribuciones durante el último año';
 let totalContributions: number | undefined;
 let contributions: Contribution[] = [];
