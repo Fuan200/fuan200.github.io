@@ -6,7 +6,10 @@ interface Props {
         studyType: string;
         startDate: string;
         endDate: string;
-        score: number;
+        score?: number;
+        faculty?: string;
+        modules?: number;
+        hours?: number;
     }[];
     languages: { language: string; fluency: string }[];
 }
@@ -18,32 +21,52 @@ const { currentLocale } = Astro;
 
 const title = currentLocale === 'en' ? 'Education' : 'Educación';
 const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:';
+const dateFormat = new Intl.DateTimeFormat(currentLocale === 'en' ? 'en' : 'es', {
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
+});
 ---
 
 <Section title={title}>
     <ul>
         {
-            education.map(({ institution, startDate, endDate, area, score }) => {
-                const startYear = new Date(startDate).getFullYear();
-                const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual';
-                const years = `${startYear} - ${endYear}`;
+            education.map(({ institution, startDate, endDate, area, score, modules, hours }) => {
                 return (
                     <li>
                         <article>
                             <header>
                                 <div>
-                                    <h3>{institution}</h3>
-                                    <h4>{area}</h4>
+                                    <h3>{area}</h3>
+                                    <h4>{institution}</h4>
+                                    {/* {faculty && <p>{faculty}</p>} */}
                                 </div>
-                                <time>{years}</time>
+                                <div class='education-dates'>
+                                    <time datetime={startDate}>{dateFormat.format(new Date(startDate))}</time>
+                                    {' - '}
+                                    <time datetime={endDate}>{dateFormat.format(new Date(endDate))}</time>
+                                </div>
                             </header>
                             <footer>
-                                {/* <p>{studyType}</p> */}
-                                <p>
-                                    <small>
-                                        {score_text} {score}
-                                    </small>
-                                </p>
+                                {score !== undefined && (
+                                    <p>
+                                        <small>
+                                            {score_text} {score}
+                                        </small>
+                                    </p>
+                                )}
+                                {(modules !== undefined || hours !== undefined) && (
+                                    <p>
+                                        <small>
+                                            {[
+                                                modules !== undefined ? `${modules} ${currentLocale === 'en' ? 'modules' : 'módulos'}` : '',
+                                                hours !== undefined ? `${hours} ${currentLocale === 'en' ? 'hours' : 'horas'}` : '',
+                                            ]
+                                                .filter(Boolean)
+                                                .join(' · ')}
+                                        </small>
+                                    </p>
+                                )}
                             </footer>
                         </article>
                     </li>
@@ -67,6 +90,10 @@ const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:';
 </Section>
 
 <style>
+    .education-dates time {
+        text-transform: capitalize;
+    }
+
     .languages {
         margin-top: 1.5rem;
         padding-top: 1.25rem;
@@ -122,13 +149,16 @@ const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:';
 
     header {
         display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
         justify-content: space-between;
         align-items: flex-start;
         margin-bottom: 4px;
     }
 
-    time {
+    .education-dates {
         color: #bbb;
         font-size: 0.85rem;
+        white-space: nowrap;
     }
 </style>

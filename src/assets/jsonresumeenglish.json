@@ -98,6 +98,18 @@
             "endDate": "2024-11-30",
             "score": 9.36,
             "courses": [""]
+        },
+        {
+            "institution": "Faculty of Philosophy and Letters (UACH)",
+            "faculty": "Faculty of Philosophy and Letters",
+            "url": "https://www.uach.mx",
+            "area": "English Language Diploma",
+            "studyType": "Diploma",
+            "startDate": "2025-11-01",
+            "endDate": "2026-09-30",
+            "modules": 8,
+            "hours": 320,
+            "courses": []
         }
     ],
 
