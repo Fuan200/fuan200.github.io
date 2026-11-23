@@ -11,7 +11,7 @@ import Projects from '@/components/portfolio/sections/Projects.astro';
 import GitHubActivity from '@/components/portfolio/sections/GitHubActivity.astro';
 import Skills from '@/components/portfolio/sections/Skills.astro';
 
-import { basics, work, education, projects } from '@cv_english';
+import { basics, work, education, projects, languages } from '@cv_english';
 const { short_name } = basics;
 ---
 
@@ -22,7 +22,7 @@ const { short_name } = basics;
         <GitHubActivity profiles={basics.profiles} />
         <About basics={basics} />
         <Experience work={work} />
-        <Education education={education} />
+        <Education education={education} languages={languages} />
         <Projects projects={projects} />
         <Skills />
     </main>

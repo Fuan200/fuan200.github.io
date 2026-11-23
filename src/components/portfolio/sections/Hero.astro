@@ -112,7 +112,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(' &bull; ');
                 } -->
                 {
                     basics.cv && (
-                        <a href={basics.cv} download class='download-btn' title={`Descargar el CV de ${name}`}>
+                        <a
+                            href={basics.cv}
+                            download
+                            class='download-btn'
+                            title={currentLocale === 'en' ? `Download ${name}'s CV` : `Descargar el CV de ${name}`}
+                        >
                             {download_cv}
                         </a>
                     )

@@ -8,11 +8,12 @@ interface Props {
         endDate: string;
         score: number;
     }[];
+    languages: { language: string; fluency: string }[];
 }
 
 import Section from '@/components/Section.astro';
 
-const { education } = Astro.props;
+const { education, languages } = Astro.props;
 const { currentLocale } = Astro;
 
 const title = currentLocale === 'en' ? 'Education' : 'Educación';
@@ -22,7 +23,7 @@ const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:';
 <Section title={title}>
     <ul>
         {
-            education.map(({ institution, startDate, endDate, area, studyType, score }) => {
+            education.map(({ institution, startDate, endDate, area, score }) => {
                 const startYear = new Date(startDate).getFullYear();
                 const endYear = endDate != null ? new Date(endDate).getFullYear() : 'Actual';
                 const years = `${startYear} - ${endYear}`;
@@ -37,7 +38,7 @@ const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:';
                                 <time>{years}</time>
                             </header>
                             <footer>
-                                <p>{studyType}</p>
+                                {/* <p>{studyType}</p> */}
                                 <p>
                                     <small>
                                         {score_text} {score}
@@ -50,9 +51,58 @@ const score_text = currentLocale === 'en' ? 'Score:' : 'Promedio de:';
             })
         }
     </ul>
+    <div class='languages'>
+        <h3>{currentLocale === 'en' ? 'Languages' : 'Idiomas'}</h3>
+        <div class='language-list'>
+            {
+                languages.map(({ language, fluency }) => (
+                    <p class='language'>
+                        <span>{language}</span>
+                        <span>{fluency}</span>
+                    </p>
+                ))
+            }
+        </div>
+    </div>
 </Section>
 
 <style>
+    .languages {
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #303030;
+    }
+
+    .languages h3 {
+        color: #fdfdfd;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .language-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2.5rem;
+        margin-top: 0.75rem;
+    }
+
+    .language {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        color: #bbb;
+    }
+
+    .language span:last-child {
+        font-size: 0.85em;
+    }
+
+    article h4,
+    .language {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
     ul {
         display: flex;
         flex-direction: column;
